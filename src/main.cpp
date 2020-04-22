@@ -5,7 +5,6 @@
 
 
 
-
 // norma : H -> \mathbb{R}
 //  double     || W || = sqrt <W,W>;
 //  LZ         || W || = sqrt<W,~W>;
@@ -13,13 +12,15 @@
 
 
 int main() {
-  
-  Wektor<double,5> D(3,4,6,3,2);
-  Wektor<double,5> E(8,7,6,5,4);
-  Wektor<double,5> F = D + E;
+  LZespolona tabela[5];
+  for (int i=0; i < 5; ++i)
+    cin >> tabela[i];
+  Wektor<LZespolona,5> D(tabela);
+  Wektor<LZespolona,5> E(tabela);
+  Wektor<LZespolona,5> F = D + E;
   cout << D << endl;
   cout << E << endl;
-
+  
   cout << F << endl;
 
   double l = D.dlugosc();
