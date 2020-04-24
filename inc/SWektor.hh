@@ -1,3 +1,6 @@
+#ifndef SWEKTOR_S
+#define SWEKTOR_S
+
 #include <iostream>
 #include <math.h>
 #include "LZespolona.hh"
@@ -8,14 +11,14 @@ using std::cout;
 using std::endl;
 
 
-template<class TYP , int ROZMIAR>
+template<class TYP ,unsigned int ROZMIAR>
 class Wektor {
   TYP tab [ROZMIAR];
   
 public:
   //  Metody sluzace jako set i get
-  TYP & operator [] (int index);
-  const TYP & operator [] (int index) const;
+  TYP & operator [] (unsigned int index);
+  const TYP & operator [] (unsigned int index) const;
   
   // Konstruktory
   Wektor();
@@ -41,17 +44,15 @@ public:
 };
 
 // Wyswietlanie i wczytywanie
-template<class TYP, int ROZMIAR>
+template<class TYP, unsigned int ROZMIAR>
 std::ostream & operator<< (std::ostream &strm, const Wektor<TYP,ROZMIAR> &W);
 
-template<class TYP, int ROZMIAR>
+template<class TYP, unsigned int ROZMIAR>
 std::istream & operator>> (std::istream &strm, Wektor<TYP,ROZMIAR> &W);
 
 // Operacja matematyczna
-template<class TYP, int ROZMIAR>
+template<class TYP, unsigned int ROZMIAR>
 Wektor<TYP,ROZMIAR> operator * (TYP liczba, const Wektor<TYP,ROZMIAR> &W);
-
-
 
 
 template<>
@@ -62,3 +63,8 @@ bool Wektor<LZespolona,5>::operator == (const Wektor<LZespolona,5> &W) const;
 
 template<>
 Wektor<LZespolona,5> Wektor<LZespolona,5>::operator / (LZespolona liczba) const;
+
+
+
+
+#endif

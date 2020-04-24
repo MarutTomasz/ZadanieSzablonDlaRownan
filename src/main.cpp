@@ -2,7 +2,7 @@
 // LZespolona
 
 #include "SWektor.hh"
-
+#include "SMacierzKw.hh"
 
 
 // norma : H -> \mathbb{R}
@@ -12,19 +12,17 @@
 
 
 int main() {
-  LZespolona tabela[5];
-  for (int i=0; i < 5; ++i)
-    cin >> tabela[i];
-  Wektor<LZespolona,5> D(tabela);
-  Wektor<LZespolona,5> E(tabela);
-  Wektor<LZespolona,5> F = D + E;
-  cout << D << endl;
-  cout << E << endl;
+  double tab[] = {4,4,5,2,1};
+  Wektor<double,5> W(tab);
   
-  cout << F << endl;
+  MacierzKw<Wektor,double,5> A;
+  cin >> A;
+    
+  MacierzKw<Wektor,double,5> C;
+  C.MacierzJednostkowa();
+  
+  cout << C << endl;
 
-  double l = D.dlugosc();
-  cout << l << endl;
   
   return 0;
 }
