@@ -59,11 +59,16 @@ template<>
 double Wektor<LZespolona,5>::dlugosc() const;
 
 template<>
-bool Wektor<LZespolona,5>::operator == (const Wektor<LZespolona,5> &W) const;
+double Wektor<LZespolona,4>::dlugosc() const;
 
 template<>
-Wektor<LZespolona,5> Wektor<LZespolona,5>::operator / (LZespolona liczba) const;
+double Wektor<LZespolona,3>::dlugosc() const;
 
+template<>
+double Wektor<LZespolona,2>::dlugosc() const;
+
+template<>
+double Wektor<LZespolona,1>::dlugosc() const;
 
 
 

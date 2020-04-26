@@ -12,7 +12,7 @@ LZespolona::LZespolona(double RE, double IM){
 
 LZespolona LZespolona::operator = (double liczba) {
   re = liczba;
-  im = 0.0;
+  im = 0;
   return *this;
 }
 
@@ -41,6 +41,27 @@ LZespolona LZespolona::operator * (const LZespolona & Skl) const {
   LZespolona  Wynik;
   Wynik.re = (re * Skl.re) - (im * Skl.im);
   Wynik.im = (re * Skl.im) + (im * Skl.re);
+  return Wynik;
+}
+
+LZespolona LZespolona::operator * (double liczba) const {
+  LZespolona  Wynik;
+  Wynik.re = re * liczba;
+  Wynik.im = im * liczba;
+  return Wynik;
+}
+
+LZespolona LZespolona::operator *= (double liczba) const {
+  LZespolona  Wynik = (*this);
+  Wynik.re = Wynik.re * liczba;
+  Wynik.im = Wynik.im * liczba;
+  return Wynik;
+}
+
+LZespolona operator * (double liczba, const LZespolona & Skl) {
+  LZespolona  Wynik;
+  Wynik.re = Skl.re * liczba;
+  Wynik.im = Skl.im * liczba;
   return Wynik;
 }
 
@@ -73,6 +94,18 @@ bool LZespolona::operator == (const LZespolona & Wynik) const {
 
 bool LZespolona::operator != (const LZespolona & Wynik) const {
   if (*this == Wynik)
+    return false;
+  return true;
+}
+
+bool LZespolona::operator == (double liczba) const {
+  if ((*this).modul() == liczba)
+      return true;
+  return false;
+}
+
+bool LZespolona::operator != (double liczba) const {
+  if (*this == liczba)
     return false;
   return true;
 }
@@ -115,4 +148,8 @@ std::istream & operator >> (std::istream &strm, LZespolona &Liczba) {
   if (znak != ')')
     strm.setstate(std::ios::failbit);
   return strm;
+}
+
+double abs(const LZespolona & Skl) {
+  return abs(Skl.modul());
 }

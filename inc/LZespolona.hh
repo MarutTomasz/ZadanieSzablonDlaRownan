@@ -23,19 +23,27 @@ struct  LZespolona {
   LZespolona operator =  (double liczba);
   LZespolona operator +  (const LZespolona & Skl) const;
   LZespolona operator -  (const LZespolona & Skl) const;
-  LZespolona operator *  (const LZespolona & Skl) const;
+  LZespolona operator *  (const LZespolona & Skl) const; 
+  LZespolona operator *  (double liczba) const; 
+  LZespolona operator *= (double liczba) const; 
   LZespolona operator /  (const LZespolona & Skl) const;
   LZespolona operator += (const LZespolona & Skl) const;
   LZespolona operator /  (double Mudul) const;
   
   bool operator == (const LZespolona & Wynik) const;
   bool operator != (const LZespolona & Wynik) const;
-  
+
+  bool operator == (double liczba) const;
+  bool operator != (double liczba) const;
+
   LZespolona sprzez() const;
   double modul2() const;
   double modul() const;
   
 };
+
+LZespolona operator * (double liczba, const LZespolona & SKl); 
+double abs(const LZespolona & Skl);
 std::istream & operator >> (std::istream &strm, LZespolona &Skl);
 std::ostream & operator << (std::ostream &strm, const LZespolona &Skl);
 

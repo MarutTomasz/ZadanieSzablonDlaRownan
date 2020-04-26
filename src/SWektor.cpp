@@ -137,34 +137,47 @@ double Wektor<TYP,ROZMIAR>::dlugosc() const{
 
 
 /********** SPECJALIZACJE  **********/
-
-template<>
-bool Wektor<LZespolona,5>::operator == (const Wektor<LZespolona,5> &W) const {
-  double epsilon = 0.000001;
-  for (unsigned int i=0; i<5; ++i)
-    if (abs(tab[i].modul() - W[i].modul()) > epsilon)
-      return false;
-  return true;
-}
-
-template<>
-Wektor<LZespolona,5> Wektor<LZespolona,5>::operator / (LZespolona liczba) const {
-  Wektor<LZespolona,5> wynik;
-  if(liczba.modul() == 0){
-    cout << "Niedozwolone dzielenie przez 0" << endl;
-    exit(1);
-  }
-  for (unsigned int i=0; i<5; ++i)
-    wynik[i] = tab[i] / liczba;
-  return wynik;
-}
-
 template<>
 double Wektor<LZespolona,5>::dlugosc() const {
   double length=0;
-  for (unsigned int i=0;i<5;++i) {
+  for (unsigned int i=0;i<5;++i) 
     length += tab[i].modul2(); 
-  }
+  length = sqrt(length);
+  return length;
+}
+
+template<>
+double Wektor<LZespolona,4>::dlugosc() const {
+  double length=0;
+  for (unsigned int i=0;i<4;++i) 
+    length += tab[i].modul2(); 
+  length = sqrt(length);
+  return length;
+}
+
+template<>
+double Wektor<LZespolona,3>::dlugosc() const {
+  double length=0;
+  for (unsigned int i=0;i<3;++i) 
+    length += tab[i].modul2(); 
+  length = sqrt(length);
+  return length;
+}
+
+template<>
+double Wektor<LZespolona,2>::dlugosc() const {
+  double length=0;
+  for (unsigned int i=0;i<2;++i) 
+    length += tab[i].modul2(); 
+  length = sqrt(length);
+  return length;
+}
+
+template<>
+double Wektor<LZespolona,1>::dlugosc() const {
+  double length=0;
+  for (unsigned int i=0;i<1;++i) 
+    length += tab[i].modul2(); 
   length = sqrt(length);
   return length;
 }
