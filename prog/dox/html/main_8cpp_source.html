@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Zszablonowany układ równań: Plik źródłowy /home/tomasz/ZadanieSzablonDlaRownan/prog/prj/src/main.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Zszablonowany układ równań
+   &#160;<span id="projectnumber">wersia 1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.13 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',false,false,'search.php','Szukaj');
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('main_8cpp_source.html','');});
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle">
+<div class="title">main.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="main_8cpp.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_s_wektor_8hh.html">SWektor.hh</a>&quot;</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_s_macierz_kw_8hh.html">SMacierzKw.hh</a>&quot;</span></div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_l_zespolona_8hh.html">LZespolona.hh</a>&quot;</span></div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">// norma : H -&gt; \mathbb{R}</span></div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">//  double     || W || = sqrt &lt;W,W&gt;;</span></div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">//  LZ         || W || = sqrt&lt;W,~W&gt;;</span></div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div><div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">   13</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a>() {</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;  <a class="code" href="class_macierz_kw.html">MacierzKw&lt;double,5&gt;</a> A;</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  cin &gt;&gt; A;</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  cout &lt;&lt; A&lt;&lt; endl;</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  <span class="keywordtype">double</span> wyznacznik = A.<a class="code" href="class_macierz_kw.html#a27c42db5c70afea027e0c42f89c87e60">wyznacznik</a>(<a class="code" href="_s_macierz_kw_8hh.html#aaf653bd2ed57cdd0f3fe5b2e9cf2f3c2ab15a7891aa5223439e4692a1048cb220">Gauss</a>);</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  cout &lt;&lt; wyznacznik &lt;&lt; endl;</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  <span class="keywordflow">return</span> 0;</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;}</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  </div><div class="ttc" id="class_macierz_kw_html_a27c42db5c70afea027e0c42f89c87e60"><div class="ttname"><a href="class_macierz_kw.html#a27c42db5c70afea027e0c42f89c87e60">MacierzKw::wyznacznik</a></div><div class="ttdeci">TYP wyznacznik(Wyz_Metoda metoda) const</div><div class="ttdef"><b>Definition:</b> <a href="_s_macierz_kw_8cpp_source.html#l00224">SMacierzKw.cpp:224</a></div></div>
+<div class="ttc" id="_s_macierz_kw_8hh_html_aaf653bd2ed57cdd0f3fe5b2e9cf2f3c2ab15a7891aa5223439e4692a1048cb220"><div class="ttname"><a href="_s_macierz_kw_8hh.html#aaf653bd2ed57cdd0f3fe5b2e9cf2f3c2ab15a7891aa5223439e4692a1048cb220">Gauss</a></div><div class="ttdef"><b>Definition:</b> <a href="_s_macierz_kw_8hh_source.html#l00007">SMacierzKw.hh:7</a></div></div>
+<div class="ttc" id="_s_wektor_8hh_html"><div class="ttname"><a href="_s_wektor_8hh.html">SWektor.hh</a></div><div class="ttdoc">Definicja szablonu klasy Wektor. </div></div>
+<div class="ttc" id="main_8cpp_html_ae66f6b31b5ad750f1fe042a706a4e3d4"><div class="ttname"><a href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a></div><div class="ttdeci">int main()</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00013">main.cpp:13</a></div></div>
+<div class="ttc" id="class_macierz_kw_html"><div class="ttname"><a href="class_macierz_kw.html">MacierzKw</a></div><div class="ttdef"><b>Definition:</b> <a href="_s_macierz_kw_8hh_source.html#l00014">SMacierzKw.hh:14</a></div></div>
+<div class="ttc" id="_l_zespolona_8hh_html"><div class="ttname"><a href="_l_zespolona_8hh.html">LZespolona.hh</a></div><div class="ttdoc">Definicja struktury LZespolona. </div></div>
+<div class="ttc" id="_s_macierz_kw_8hh_html"><div class="ttname"><a href="_s_macierz_kw_8hh.html">SMacierzKw.hh</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_4aa64b0872d36146e049722e293482e3.html">prj</a></li><li class="navelem"><a class="el" href="dir_400757c3a0df52e783ed9699284f29ce.html">src</a></li><li class="navelem"><a class="el" href="main_8cpp.html">main.cpp</a></li>
+    <li class="footer">Wygenerowano przez
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
+  </ul>
+</div>
+</body>
+</html>

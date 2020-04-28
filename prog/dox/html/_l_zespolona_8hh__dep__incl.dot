@@ -1,0 +1,25 @@
+digraph "/home/tomasz/ZadanieSzablonDlaRownan/prog/prj/inc/LZespolona.hh"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node3 [label="/home/tomasz/ZadanieSzablon\lDlaRownan/prog/prj/inc/LZespolona.hh",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="/home/tomasz/ZadanieSzablon\lDlaRownan/prog/prj/inc/SWektor.hh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_s_wektor_8hh.html",tooltip="Definicja szablonu klasy Wektor. "];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="/home/tomasz/ZadanieSzablon\lDlaRownan/prog/prj/inc/SMacierzKw.hh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_s_macierz_kw_8hh.html"];
+  Node5 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="/home/tomasz/ZadanieSzablon\lDlaRownan/prog/prj/src/SMacierz\lKw.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_s_macierz_kw_8cpp.html"];
+  Node6 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="/home/tomasz/ZadanieSzablon\lDlaRownan/prog/prj/src/CMacierz\lKw.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_c_macierz_kw_8cpp.html"];
+  Node5 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="/home/tomasz/ZadanieSzablon\lDlaRownan/prog/prj/src/main.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$main_8cpp.html"];
+  Node4 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="/home/tomasz/ZadanieSzablon\lDlaRownan/prog/prj/src/SWektor.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_s_wektor_8cpp.html",tooltip="Definicje metod i funkcji klasy Wektor. "];
+  Node9 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="/home/tomasz/ZadanieSzablon\lDlaRownan/prog/prj/src/CWektor.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_c_wektor_8cpp.html",tooltip="Jawne konkretyzacje szablonu klasy Wektor. "];
+  Node4 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="/home/tomasz/ZadanieSzablon\lDlaRownan/prog/prj/src/LZespolona.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_l_zespolona_8cpp.html",tooltip="Definicje metod i funkcji dla struktury LZespolona. "];
+  Node3 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}
