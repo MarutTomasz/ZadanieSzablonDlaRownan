@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Zszablonowany układ równań: Plik źródłowy /home/tomasz/ZadanieSzablonDlaRownan/prog/prj/inc/SUkladRownanL.hh</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Zszablonowany układ równań
+   &#160;<span id="projectnumber">wersia 1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.13 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',false,false,'search.php','Szukaj');
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('_s_uklad_rownan_l_8hh_source.html','');});
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle">
+<div class="title">SUkladRownanL.hh</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_s_uklad_rownan_l_8hh.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef SUKLADROWNANL_S</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define SUKLADROWNANL_S</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_s_wektor_8hh.html">SWektor.hh</a>&quot;</span></div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_l_zespolona_8hh.html">LZespolona.hh</a>&quot;</span></div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_s_macierz_kw_8hh.html">SMacierzKw.hh</a>&quot;</span></div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;iomanip&gt;</span></div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">using</span> std::setprecision;</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">using</span> std::fixed;</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">using</span> std::defaultfloat;</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">using</span> std::scientific;</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> TYP, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> ROZMIAR&gt;</div><div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="class_uklad_rownan_l.html">   15</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_uklad_rownan_l.html">UkladRownanL</a>{</div><div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="class_uklad_rownan_l.html#a02f16b84fce9f22c56082f0ffe3f88f0">   16</a></span>&#160;  <a class="code" href="class_macierz_kw.html">MacierzKw&lt;TYP,ROZMIAR&gt;</a> <a class="code" href="class_uklad_rownan_l.html#a02f16b84fce9f22c56082f0ffe3f88f0">A</a>; <span class="comment">// Ax = b</span></div><div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="class_uklad_rownan_l.html#a21e27d1ff458bf50a688441a2897fe15">   17</a></span>&#160;  <a class="code" href="class_wektor.html">Wektor&lt;TYP,ROZMIAR&gt;</a> <a class="code" href="class_uklad_rownan_l.html#a21e27d1ff458bf50a688441a2897fe15">b</a>;</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">public</span>:</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  <span class="comment">// Konstruktory  </span></div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  <a class="code" href="class_uklad_rownan_l.html#a16062bc1ded039952cb375200140bb0e">UkladRownanL</a>();</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  <a class="code" href="class_uklad_rownan_l.html#a16062bc1ded039952cb375200140bb0e">UkladRownanL</a>(<span class="keyword">const</span> <a class="code" href="class_macierz_kw.html">MacierzKw&lt;TYP,ROZMIAR&gt;</a> &amp; M, <span class="keyword">const</span> <a class="code" href="class_wektor.html">Wektor&lt;TYP,ROZMIAR&gt;</a> &amp; W);</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  </div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  <span class="comment">// Metody sluzace jako set i get</span></div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  <span class="keyword">const</span> <a class="code" href="class_macierz_kw.html">MacierzKw&lt;TYP,ROZMIAR&gt;</a> &amp; <a class="code" href="class_uklad_rownan_l.html#a5fc3d7a806f4db6afbfaff5d86b14bc0">get_A</a>() <span class="keyword">const</span>;</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  <span class="keyword">const</span> <a class="code" href="class_wektor.html">Wektor&lt;TYP,ROZMIAR&gt;</a> &amp; <a class="code" href="class_uklad_rownan_l.html#a3ce19d6578329386818d543aea80b491">get_b</a>() <span class="keyword">const</span>;</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_uklad_rownan_l.html#aac0a0afd969e6ac14313574542ed045b">set_A</a>(<span class="keyword">const</span> <a class="code" href="class_macierz_kw.html">MacierzKw&lt;TYP,ROZMIAR&gt;</a> &amp;M);</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_uklad_rownan_l.html#ab85af018b8df4b3124f3f8d86d73fa4e">set_b</a>(<span class="keyword">const</span> <a class="code" href="class_wektor.html">Wektor&lt;TYP,ROZMIAR&gt;</a> &amp;W);</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  </div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  <a class="code" href="class_wektor.html">Wektor&lt;TYP,ROZMIAR&gt;</a> <a class="code" href="class_uklad_rownan_l.html#af0474be2743b24dbe7d48f07f26b08b1">rozwiaz_Cramer</a>(<a class="code" href="_s_macierz_kw_8hh.html#aaf653bd2ed57cdd0f3fe5b2e9cf2f3c2">Wyz_Metoda</a> metoda) <span class="keyword">const</span>;</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  <a class="code" href="class_wektor.html">Wektor&lt;TYP,ROZMIAR&gt;</a> <a class="code" href="class_uklad_rownan_l.html#a512e5ffa5f8f9b2f725c5f3da13714c7">rozwiaz_Gauss</a>() <span class="keyword">const</span>;</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;};</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment">// Wyswietlanie i wczytywanie</span></div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> TYP, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> ROZMIAR&gt;</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;std::istream &amp; <a class="code" href="_s_uklad_rownan_l_8hh.html#aaf9fc95d82228bddc6b61762cafd6586">operator &gt;&gt; </a>(std::istream &amp;strm, <a class="code" href="class_uklad_rownan_l.html">UkladRownanL&lt;TYP,ROZMIAR&gt;</a> &amp;U);</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> TYP, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> ROZMIAR&gt;</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;std::ostream &amp; operator &lt;&lt; (std::ostream &amp;strm, const UkladRownanL&lt;TYP,ROZMIAR&gt; &amp;U);</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">#endif</span></div><div class="ttc" id="class_uklad_rownan_l_html_aac0a0afd969e6ac14313574542ed045b"><div class="ttname"><a href="class_uklad_rownan_l.html#aac0a0afd969e6ac14313574542ed045b">UkladRownanL::set_A</a></div><div class="ttdeci">void set_A(const MacierzKw&lt; TYP, ROZMIAR &gt; &amp;M)</div><div class="ttdef"><b>Definition:</b> <a href="_s_uklad_rownan_l_8cpp_source.html#l00020">SUkladRownanL.cpp:20</a></div></div>
+<div class="ttc" id="_s_wektor_8hh_html"><div class="ttname"><a href="_s_wektor_8hh.html">SWektor.hh</a></div><div class="ttdoc">Definicja szablonu klasy Wektor. </div></div>
+<div class="ttc" id="class_uklad_rownan_l_html"><div class="ttname"><a href="class_uklad_rownan_l.html">UkladRownanL</a></div><div class="ttdef"><b>Definition:</b> <a href="_s_uklad_rownan_l_8hh_source.html#l00015">SUkladRownanL.hh:15</a></div></div>
+<div class="ttc" id="_s_macierz_kw_8hh_html_aaf653bd2ed57cdd0f3fe5b2e9cf2f3c2"><div class="ttname"><a href="_s_macierz_kw_8hh.html#aaf653bd2ed57cdd0f3fe5b2e9cf2f3c2">Wyz_Metoda</a></div><div class="ttdeci">Wyz_Metoda</div><div class="ttdef"><b>Definition:</b> <a href="_s_macierz_kw_8hh_source.html#l00007">SMacierzKw.hh:7</a></div></div>
+<div class="ttc" id="class_uklad_rownan_l_html_a16062bc1ded039952cb375200140bb0e"><div class="ttname"><a href="class_uklad_rownan_l.html#a16062bc1ded039952cb375200140bb0e">UkladRownanL::UkladRownanL</a></div><div class="ttdeci">UkladRownanL()</div><div class="ttdef"><b>Definition:</b> <a href="_s_uklad_rownan_l_8cpp_source.html#l00005">SUkladRownanL.cpp:5</a></div></div>
+<div class="ttc" id="class_uklad_rownan_l_html_a512e5ffa5f8f9b2f725c5f3da13714c7"><div class="ttname"><a href="class_uklad_rownan_l.html#a512e5ffa5f8f9b2f725c5f3da13714c7">UkladRownanL::rozwiaz_Gauss</a></div><div class="ttdeci">Wektor&lt; TYP, ROZMIAR &gt; rozwiaz_Gauss() const</div><div class="ttdef"><b>Definition:</b> <a href="_s_uklad_rownan_l_8cpp_source.html#l00091">SUkladRownanL.cpp:91</a></div></div>
+<div class="ttc" id="class_uklad_rownan_l_html_a5fc3d7a806f4db6afbfaff5d86b14bc0"><div class="ttname"><a href="class_uklad_rownan_l.html#a5fc3d7a806f4db6afbfaff5d86b14bc0">UkladRownanL::get_A</a></div><div class="ttdeci">const MacierzKw&lt; TYP, ROZMIAR &gt; &amp; get_A() const</div><div class="ttdef"><b>Definition:</b> <a href="_s_uklad_rownan_l_8cpp_source.html#l00031">SUkladRownanL.cpp:31</a></div></div>
+<div class="ttc" id="class_macierz_kw_html"><div class="ttname"><a href="class_macierz_kw.html">MacierzKw</a></div><div class="ttdef"><b>Definition:</b> <a href="_s_macierz_kw_8hh_source.html#l00014">SMacierzKw.hh:14</a></div></div>
+<div class="ttc" id="class_wektor_html"><div class="ttname"><a href="class_wektor.html">Wektor</a></div><div class="ttdoc">Modeluje pojęcie Wektor. </div><div class="ttdef"><b>Definition:</b> <a href="_s_wektor_8hh_source.html#l00031">SWektor.hh:31</a></div></div>
+<div class="ttc" id="class_uklad_rownan_l_html_a02f16b84fce9f22c56082f0ffe3f88f0"><div class="ttname"><a href="class_uklad_rownan_l.html#a02f16b84fce9f22c56082f0ffe3f88f0">UkladRownanL::A</a></div><div class="ttdeci">MacierzKw&lt; TYP, ROZMIAR &gt; A</div><div class="ttdef"><b>Definition:</b> <a href="_s_uklad_rownan_l_8hh_source.html#l00016">SUkladRownanL.hh:16</a></div></div>
+<div class="ttc" id="class_uklad_rownan_l_html_a3ce19d6578329386818d543aea80b491"><div class="ttname"><a href="class_uklad_rownan_l.html#a3ce19d6578329386818d543aea80b491">UkladRownanL::get_b</a></div><div class="ttdeci">const Wektor&lt; TYP, ROZMIAR &gt; &amp; get_b() const</div><div class="ttdef"><b>Definition:</b> <a href="_s_uklad_rownan_l_8cpp_source.html#l00036">SUkladRownanL.cpp:36</a></div></div>
+<div class="ttc" id="_l_zespolona_8hh_html"><div class="ttname"><a href="_l_zespolona_8hh.html">LZespolona.hh</a></div><div class="ttdoc">Definicja struktury LZespolona. </div></div>
+<div class="ttc" id="_s_macierz_kw_8hh_html"><div class="ttname"><a href="_s_macierz_kw_8hh.html">SMacierzKw.hh</a></div></div>
+<div class="ttc" id="_s_uklad_rownan_l_8hh_html_aaf9fc95d82228bddc6b61762cafd6586"><div class="ttname"><a href="_s_uklad_rownan_l_8hh.html#aaf9fc95d82228bddc6b61762cafd6586">operator&gt;&gt;</a></div><div class="ttdeci">std::istream &amp; operator&gt;&gt;(std::istream &amp;strm, UkladRownanL&lt; TYP, ROZMIAR &gt; &amp;U)</div><div class="ttdef"><b>Definition:</b> <a href="_s_uklad_rownan_l_8cpp_source.html#l00042">SUkladRownanL.cpp:42</a></div></div>
+<div class="ttc" id="class_uklad_rownan_l_html_a21e27d1ff458bf50a688441a2897fe15"><div class="ttname"><a href="class_uklad_rownan_l.html#a21e27d1ff458bf50a688441a2897fe15">UkladRownanL::b</a></div><div class="ttdeci">Wektor&lt; TYP, ROZMIAR &gt; b</div><div class="ttdef"><b>Definition:</b> <a href="_s_uklad_rownan_l_8hh_source.html#l00017">SUkladRownanL.hh:17</a></div></div>
+<div class="ttc" id="class_uklad_rownan_l_html_ab85af018b8df4b3124f3f8d86d73fa4e"><div class="ttname"><a href="class_uklad_rownan_l.html#ab85af018b8df4b3124f3f8d86d73fa4e">UkladRownanL::set_b</a></div><div class="ttdeci">void set_b(const Wektor&lt; TYP, ROZMIAR &gt; &amp;W)</div><div class="ttdef"><b>Definition:</b> <a href="_s_uklad_rownan_l_8cpp_source.html#l00025">SUkladRownanL.cpp:25</a></div></div>
+<div class="ttc" id="class_uklad_rownan_l_html_af0474be2743b24dbe7d48f07f26b08b1"><div class="ttname"><a href="class_uklad_rownan_l.html#af0474be2743b24dbe7d48f07f26b08b1">UkladRownanL::rozwiaz_Cramer</a></div><div class="ttdeci">Wektor&lt; TYP, ROZMIAR &gt; rozwiaz_Cramer(Wyz_Metoda metoda) const</div><div class="ttdef"><b>Definition:</b> <a href="_s_uklad_rownan_l_8cpp_source.html#l00069">SUkladRownanL.cpp:69</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_4aa64b0872d36146e049722e293482e3.html">prj</a></li><li class="navelem"><a class="el" href="dir_72345776cd6700fb0dedb8f1faaa0c00.html">inc</a></li><li class="navelem"><a class="el" href="_s_uklad_rownan_l_8hh.html">SUkladRownanL.hh</a></li>
+    <li class="footer">Wygenerowano przez
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -12,6 +12,14 @@ var _c_wektor_8cpp =
     [ "operator*", "_c_wektor_8cpp.html#a9507e528c0e4b7131529838c7d87c118", null ],
     [ "operator<<", "_c_wektor_8cpp.html#ad0cc7fbd18e3d3ee9f1d1838774ec1dc", null ],
     [ "operator<<", "_c_wektor_8cpp.html#a1477dae47c94eda96a4cae960f95d0ae", null ],
+    [ "operator<<", "_c_wektor_8cpp.html#a05bbf8a413d3920a6af0e98b743c9b1d", null ],
+    [ "operator<<", "_c_wektor_8cpp.html#a7fe9165c301a2094c77adc397deee80b", null ],
+    [ "operator<<", "_c_wektor_8cpp.html#a03e4306cbbc3ba9033c44d4fe4e7e83a", null ],
+    [ "operator<<", "_c_wektor_8cpp.html#a99bd3366f7a19e31ef7a79326d79ae71", null ],
     [ "operator>>", "_c_wektor_8cpp.html#a296ea09a05af7215785d9e642d4fb70d", null ],
-    [ "operator>>", "_c_wektor_8cpp.html#a09bdfbc26afd65dda45a2d6b7a861d2a", null ]
+    [ "operator>>", "_c_wektor_8cpp.html#a09bdfbc26afd65dda45a2d6b7a861d2a", null ],
+    [ "operator>>", "_c_wektor_8cpp.html#a3e3ac4ef9d885431608cbbfecca1d890", null ],
+    [ "operator>>", "_c_wektor_8cpp.html#aa07403a8f692c2591b9a32fe61f54120", null ],
+    [ "operator>>", "_c_wektor_8cpp.html#a74ece33ae1a39ea8c490d555bd4110f0", null ],
+    [ "operator>>", "_c_wektor_8cpp.html#a4bdc79a0078583bf8e135a876e64e5e1", null ]
 ];

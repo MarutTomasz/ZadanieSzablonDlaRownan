@@ -17,5 +17,6 @@ var class_wektor =
     [ "operator==", "class_wektor.html#a230f485e33c2be784955d8b70cb1ab2c", null ],
     [ "operator[]", "class_wektor.html#ad07020d59a3a8b514a28d7776f8e73eb", null ],
     [ "operator[]", "class_wektor.html#a3a013f8ffb0a4085327f6877ad88dbc2", null ],
+    [ "przestaw_elementy", "class_wektor.html#a50e7987b24d6450c0d66239da9d42991", null ],
     [ "tab", "class_wektor.html#a0442f660e8c8aa4f47b2c776af30daf5", null ]
 ];

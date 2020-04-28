@@ -138,10 +138,30 @@ double Wektor<TYP,ROZMIAR>::dlugosc() const{
 
 
 
+template<class TYP, unsigned int ROZMIAR>
+void Wektor<TYP,ROZMIAR>::przestaw_elementy(unsigned int index1, unsigned int index2) {
+  if (index1 < 0 || index1 >= ROZMIAR) {
+    cerr << "Poza zakresem" << endl;
+    exit(1);
+  }
+  if (index2 < 0 || index2 >= ROZMIAR) {
+    cerr << "Poza zakresem" << endl;
+    exit(1);
+  }
+  
+  TYP pomocniczy = tab[index1];
+  tab[index1] = tab[index2];
+  tab[index2] = pomocniczy;
+}
 
-
-
-
+template<class TYP, unsigned int ROZMIAR>
+void wyswietl_wektor_bledu(const Wektor<TYP,ROZMIAR> &W) {
+  cout << scientific;
+  cout << setprecision(2);
+  cout << "Wektor bledu:  Ax-b = (  " << W << ")" << endl;
+  cout << "Dlugosc wektora bledu: |Ax-b| = " << W.dlugosc() << endl << endl << endl;
+  cout << defaultfloat;
+}
 
 
 /********** SPECJALIZACJE  **********/

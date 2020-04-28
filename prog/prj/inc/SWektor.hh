@@ -13,6 +13,13 @@
 #include <iostream>
 #include <math.h>
 #include "LZespolona.hh"
+#include <iomanip>
+
+using std::setprecision;
+using std::fixed;
+using std::defaultfloat;
+using std::scientific;
+
 
 using std::cerr;
 using std::cin;
@@ -149,6 +156,18 @@ public:
    * \return Zwraca długość wektora.
    */
   double dlugosc() const;
+
+  /*!
+   * \brief Zamiana miejscami elementow wektora
+   *
+   * Funkcja zamienia miejscami dwa elementy wektora o 
+   * indexach podanych jako argumenty wywołania funkcji.
+   * \param index1 - index pierwszego elementu do zmiany.
+   * \param index2 - index drugiego elementu do zmiany.
+   * \attention Funkcja dokonuje zmian w polach struktury.
+   */
+  void przestaw_elementy(unsigned int index1, unsigned int index2);
+
 };
 
 /*!
@@ -189,6 +208,15 @@ std::istream & operator>> (std::istream &strm, Wektor<TYP,ROZMIAR> &W);
 template<class TYP, unsigned int ROZMIAR>
 Wektor<TYP,ROZMIAR> operator * (TYP liczba, const Wektor<TYP,ROZMIAR> &W);
 
+/*!
+ * \brief Specjalne wyswietlanie bledu
+ *
+ * Specjalna funkcja zajmująca się wyświetlaniem wszystkich
+ * informacji o wektorze błędu.
+ * \param[in] W - wektor błędy do wyświetlenia.
+ */
+template<class TYP, unsigned int ROZMIAR>
+void wyswietl_wektor_bledu(const Wektor<TYP,ROZMIAR> &W);
 
 /*   SPECJALIZACJE 
 template<>
