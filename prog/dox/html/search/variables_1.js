@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['re',['re',['../struct_l_zespolona.html#a98587ffd2cc06a073f8bfdba116ea8d4',1,'LZespolona']]]
+  ['b',['b',['../class_uklad_rownan_l.html#a21e27d1ff458bf50a688441a2897fe15',1,'UkladRownanL']]]
 ];

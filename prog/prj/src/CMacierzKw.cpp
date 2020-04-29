@@ -1,4 +1,14 @@
 #include "SMacierzKw.cpp"
+/*!
+ * \file
+ * \brief Jawne konkretyzacje szablonu klasy MacierzKw
+ *
+ * Plik zawiera jawne konkretyzacje szablonu i funkcji 
+ * nie należących do klasy MacierzKw. \n
+ * \attention Funkcje w tym pliku nie są udokumentowane,
+ * ponieważ są to tylko konkretyzacje opisanych już funkcji.
+ * 
+ */
 
 
 // NA STALE  RZECZYWISTE

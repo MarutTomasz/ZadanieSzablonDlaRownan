@@ -16,6 +16,9 @@
 <script type="text/javascript">
   $(document).ready(initResizable);
 </script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -35,11 +38,15 @@
 </div>
 <!-- end header part -->
 <!-- Wygenerowano przez Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+</script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
 $(function() {
-  initMenu('',false,false,'search.php','Szukaj');
+  initMenu('',true,false,'search.php','Szukaj');
+  $(document).ready(function() { init_search(); });
 });
 </script>
 <div id="main-nav"></div>
@@ -58,6 +65,20 @@ $(function() {
 $(document).ready(function(){initNavTree('_s_wektor_8hh.html','');});
 </script>
 <div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Komponenty</a> &#124;
@@ -69,9 +90,32 @@ $(document).ready(function(){initNavTree('_s_wektor_8hh.html','');});
 
 <p>Definicja szablonu klasy <a class="el" href="class_wektor.html" title="Modeluje pojęcie Wektor. ">Wektor</a>.  
 <a href="#details">Więcej...</a></p>
-<div class="textblock"><code>#include &lt;iostream&gt;</code><br />
-<code>#include &lt;math.h&gt;</code><br />
-<code>#include &quot;<a class="el" href="_l_zespolona_8hh_source.html">LZespolona.hh</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="_l_zespolona_8hh_source.html">LZespolona.hh</a>&quot;</code><br />
+<code>#include &lt;iomanip&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Wykres zależności załączania dla SWektor.hh:</div>
+<div class="dyncontent">
+<div class="center"><img src="_s_wektor_8hh__incl.png" border="0" usemap="#_2home_2tomasz_2_zadanie_szablon_dla_rownan_2prog_2prj_2inc_2_s_wektor_8hh" alt=""/></div>
+<map name="_2home_2tomasz_2_zadanie_szablon_dla_rownan_2prog_2prj_2inc_2_s_wektor_8hh" id="_2home_2tomasz_2_zadanie_szablon_dla_rownan_2prog_2prj_2inc_2_s_wektor_8hh">
+<area shape="rect" id="node2" href="_l_zespolona_8hh.html" title="Definicja struktury LZespolona. " alt="" coords="29,95,135,121"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+Ten wykres pokazuje, które pliki bezpośrednio lub pośrednio załączają ten plik:</div>
+<div class="dyncontent">
+<div class="center"><img src="_s_wektor_8hh__dep__incl.png" border="0" usemap="#_2home_2tomasz_2_zadanie_szablon_dla_rownan_2prog_2prj_2inc_2_s_wektor_8hhdep" alt=""/></div>
+<map name="_2home_2tomasz_2_zadanie_szablon_dla_rownan_2prog_2prj_2inc_2_s_wektor_8hhdep" id="_2home_2tomasz_2_zadanie_szablon_dla_rownan_2prog_2prj_2inc_2_s_wektor_8hhdep">
+<area shape="rect" id="node2" href="_s_macierz_kw_8hh.html" title="Definicja szablonu klasy MacierzKw. " alt="" coords="63,95,318,136"/>
+<area shape="rect" id="node3" href="_s_uklad_rownan_l_8hh.html" title="Definicja szablonu klasy UkladRownanL. " alt="" coords="394,191,673,233"/>
+<area shape="rect" id="node6" href="main_8cpp.html" title="Główny plik z programem wykonawczym. " alt="" coords="248,295,464,337"/>
+<area shape="rect" id="node9" href="_s_wektor_8cpp.html" title="Definicje metod i funkcji klasy Wektor. " alt="" coords="602,95,841,136"/>
+<area shape="rect" id="node7" href="_s_macierz_kw_8cpp.html" title="Definicje metod i funkcji klasy MacierzKw. " alt="" coords="17,184,236,240"/>
+<area shape="rect" id="node4" href="_s_uklad_rownan_l_8cpp.html" title="Definicje metod i funkcji klasy UkladRownanL. " alt="" coords="489,295,775,337"/>
+<area shape="rect" id="node5" href="_c_uklad_rownan_l_8cpp.html" title="Jawne konkretyzacje szablonu klasy UkladRownanL. " alt="" coords="489,392,775,433"/>
+<area shape="rect" id="node8" href="_c_macierz_kw_8cpp.html" title="Jawne konkretyzacje szablonu klasy MacierzKw. " alt="" coords="5,288,224,344"/>
+<area shape="rect" id="node10" href="_c_wektor_8cpp.html" title="Jawne konkretyzacje szablonu klasy Wektor. " alt="" coords="697,191,937,233"/>
+</map>
+</div>
 </div>
 <p><a href="_s_wektor_8hh_source.html">Idź do kodu źródłowego tego pliku.</a></p>
 <table class="memberdecls">
@@ -95,6 +139,10 @@ Funkcje</h2></td></tr>
 <tr class="memitem:a9602f181abaf7f26c4c4d94839871a60"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_wektor.html">Wektor</a>&lt; TYP, ROZMIAR &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="_s_wektor_8hh.html#a9602f181abaf7f26c4c4d94839871a60">operator*</a> (TYP liczba, const <a class="el" href="class_wektor.html">Wektor</a>&lt; TYP, ROZMIAR &gt; &amp;W)</td></tr>
 <tr class="memdesc:a9602f181abaf7f26c4c4d94839871a60"><td class="mdescLeft">&#160;</td><td class="mdescRight">Przeciążenie operatora mnożenia.  <a href="#a9602f181abaf7f26c4c4d94839871a60">Więcej...</a><br /></td></tr>
 <tr class="separator:a9602f181abaf7f26c4c4d94839871a60"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a287fba929d3149ff9b003326329921e6"><td class="memTemplParams" colspan="2">template&lt;class TYP , unsigned int ROZMIAR&gt; </td></tr>
+<tr class="memitem:a287fba929d3149ff9b003326329921e6"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="_s_wektor_8hh.html#a287fba929d3149ff9b003326329921e6">wyswietl_wektor_bledu</a> (const <a class="el" href="class_wektor.html">Wektor</a>&lt; TYP, ROZMIAR &gt; &amp;W)</td></tr>
+<tr class="memdesc:a287fba929d3149ff9b003326329921e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specjalne wyswietlanie bledu.  <a href="#a287fba929d3149ff9b003326329921e6">Więcej...</a><br /></td></tr>
+<tr class="separator:a287fba929d3149ff9b003326329921e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Opis szczegółowy</h2>
 <div class="textblock"><p>Plik zawiera definicje szablonu klasy <a class="el" href="class_wektor.html" title="Modeluje pojęcie Wektor. ">Wektor</a> o zmiennym rozmiarze i typie danych. <br />
@@ -138,7 +186,7 @@ template&lt;class TYP , unsigned int ROZMIAR&gt; </div>
 </dl>
 <dl class="section return"><dt>Zwraca</dt><dd>Zwraca wektor po dokonaniu operacji mnożenia. </dd></dl>
 
-<p class="definition">Definicja w linii <a class="el" href="_s_wektor_8cpp_source.html#l00105">105</a> pliku <a class="el" href="_s_wektor_8cpp_source.html">SWektor.cpp</a>.</p>
+<p class="definition">Definicja w linii <a class="el" href="_s_wektor_8cpp_source.html#l00104">104</a> pliku <a class="el" href="_s_wektor_8cpp_source.html">SWektor.cpp</a>.</p>
 
 </div>
 </div>
@@ -179,9 +227,9 @@ template&lt;class TYP , unsigned int ROZMIAR&gt; </div>
 </dl>
 <dl class="section return"><dt>Zwraca</dt><dd>Zwraca referencję do strumienia danych. </dd></dl>
 <dl class="section attention"><dt>Uwaga</dt><dd>Strumień musi być poprawnie zainicjowany;<br />
- W przypadku czytania błędnych wartości strumień psuje sie. </dd></dl>
+</dd></dl>
 
-<p class="definition">Definicja w linii <a class="el" href="_s_wektor_8cpp_source.html#l00052">52</a> pliku <a class="el" href="_s_wektor_8cpp_source.html">SWektor.cpp</a>.</p>
+<p class="definition">Definicja w linii <a class="el" href="_s_wektor_8cpp_source.html#l00051">51</a> pliku <a class="el" href="_s_wektor_8cpp_source.html">SWektor.cpp</a>.</p>
 
 </div>
 </div>
@@ -224,7 +272,56 @@ template&lt;class TYP , unsigned int ROZMIAR&gt; </div>
 <dl class="section attention"><dt>Uwaga</dt><dd>Strumień musi być poprawnie zainicjowany;<br />
  W przypadku czytania błędnych wartości strumień psuje sie. </dd></dl>
 
-<p class="definition">Definicja w linii <a class="el" href="_s_wektor_8cpp_source.html#l00045">45</a> pliku <a class="el" href="_s_wektor_8cpp_source.html">SWektor.cpp</a>.</p>
+<p class="definition">Definicja w linii <a class="el" href="_s_wektor_8cpp_source.html#l00044">44</a> pliku <a class="el" href="_s_wektor_8cpp_source.html">SWektor.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a287fba929d3149ff9b003326329921e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a287fba929d3149ff9b003326329921e6">&#9670;&nbsp;</a></span>wyswietl_wektor_bledu()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class TYP , unsigned int ROZMIAR&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void wyswietl_wektor_bledu </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_wektor.html">Wektor</a>&lt; TYP, ROZMIAR &gt; &amp;&#160;</td>
+          <td class="paramname"><em>W</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Specjalna funkcja zajmująca się wyświetlaniem wszystkich informacji o wektorze błędu. <br />
+ Przykład wyświetlania informacji o wektorze błędu dla danych typu double: </p><pre class="fragment">        Wektor bledu:  Ax-b = ( -1.78e-15  -1.78e-15  -1.78e-15  0.00e+00  -2.89e-15 )
+        Dlugosc wektora bledu: ||Ax-b|| = 4.22e-15
+</pre><p> Przykład wyświetlania informacji o wektorze błędu dla danych typu <a class="el" href="struct_l_zespolona.html" title="Modeluje pojęcie LZespolona. ">LZespolona</a>: </p><pre class="fragment">        Wektor bledu:  Ax-b = ( (3.55e-15+1.78e-15i)  (1.78e-15-4.00e-15i)  (-3.55e-15+0.00e+00i)  (0.00e+00-8.88e-16i)  (1.24e-14-6.44e-15i) )
+        Dlugosc wektora bledu: ||Ax-b|| = 1.56e-14
+</pre> <dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">W</td><td>- wektor błędy do wyświetlenia. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definicja w linii <a class="el" href="_s_wektor_8cpp_source.html#l00157">157</a> pliku <a class="el" href="_s_wektor_8cpp_source.html">SWektor.cpp</a>.</p>
+<div class="dynheader">
+Oto graf wywołań dla tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="_s_wektor_8hh_a287fba929d3149ff9b003326329921e6_cgraph.png" border="0" usemap="#_s_wektor_8hh_a287fba929d3149ff9b003326329921e6_cgraph" alt=""/></div>
+<map name="_s_wektor_8hh_a287fba929d3149ff9b003326329921e6_cgraph" id="_s_wektor_8hh_a287fba929d3149ff9b003326329921e6_cgraph">
+<area shape="rect" id="node2" href="class_wektor.html#a2506fbd572c68588f1250bb0e3240d07" title="Wyliczenie długości wektora. " alt="" coords="211,5,328,32"/>
+</map>
+</div>
+<div class="dynheader">
+Oto graf wywoływań tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="_s_wektor_8hh_a287fba929d3149ff9b003326329921e6_icgraph.png" border="0" usemap="#_s_wektor_8hh_a287fba929d3149ff9b003326329921e6_icgraph" alt=""/></div>
+<map name="_s_wektor_8hh_a287fba929d3149ff9b003326329921e6_icgraph" id="_s_wektor_8hh_a287fba929d3149ff9b003326329921e6_icgraph">
+<area shape="rect" id="node2" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="211,5,261,32"/>
+</map>
+</div>
 
 </div>
 </div>

@@ -1,4 +1,11 @@
 #include "SMacierzKw.hh"
+/*!
+ * \file
+ * \brief Definicje metod i funkcji klasy MacierzKw
+ *
+ * Plik zawiera definicje metod i funkcji działających
+ * na klasie MacierzKw oraz specjalizacje wybranych metod. \n
+ */
 
 /********** SET I GET  **********/
 template<class TYP, unsigned int ROZMIAR>
@@ -348,26 +355,55 @@ MacierzKw<TYP,ROZMIAR> MacierzKw<TYP,ROZMIAR>::odwroc(Odw_Metoda metoda) const {
 
 
 /********** SPECJALIZACJE **********/
-// TYMCZASOWE
 
+/*!
+ * \brief Specjalizacja wyliczenia wyznacznika 
+ *
+ * Specjalizacja funkcji wylicza wyznacznik macierzy dla rozmiaru 1 z elementem 
+ * typu double. Wyznacznik równy jest jedynemu elementowi.
+ * \param[in] metoda - metoda obliczania wyznacznika.
+ * \return Zwraca jedyny element macierzy jako wyznacznik.
+ */
 template<>
 double MacierzKw<double,1>::wyznacznik(Wyz_Metoda metoda) const {
   return tab[0][0];
 }
 
+/*!
+ * \brief Specjalizacja tworzenia macierzy dopełnień 
+ *
+ * Specjalizacja funkcji macierzy dopełnień, która zawsze kończy działanie 
+ * programu, ponieważ nie można stworzyć dopełnienia algebraicznego macierzy 
+ * jednoelementowej.
+ * \return Zawsze kończy działanie programu.
+ */
 template<>
 MacierzKw<double,1> MacierzKw<double,1>::macierz_dopelnien() const {
   cerr << "Macierz jednoelementowa. Nie mozna wyznaczyc dopelnienia algebraicznego" << endl;
   exit(1);
 }
 
-
-// SPECJALIZACJE ZESPOLONE
+/*!
+ * \brief Specjalizacja wyliczenia wyznacznika 
+ *
+ * Specjalizacja funkcji wylicza wyznacznik macierzy dla rozmiaru 1 z elementem 
+ * typu LZespolona. Wyznacznik równy jest jedynemu elementowi.
+ * \param[in] metoda - metoda obliczania wyznacznika.
+ * \return Zwraca jedyny element macierzy jako wyznacznik.
+ */
 template<>
 LZespolona MacierzKw<LZespolona,1>::wyznacznik(Wyz_Metoda metoda) const {
   return tab[0][0];
 }
 
+/*!
+ * \brief Specjalizacja tworzenia macierzy dopełnień 
+ *
+ * Specjalizacja funkcji macierzy dopełnień, która zawsze kończy działanie 
+ * programu, ponieważ nie można stworzyć dopełnienia algebraicznego macierzy 
+ * jednoelementowej.
+ * \return Zawsze kończy działanie programu.
+ */
 template<>
 MacierzKw<LZespolona,1> MacierzKw<LZespolona,1>::macierz_dopelnien() const {
   cerr << "Macierz jednoelementowa. Nie mozna wyznaczyc dopelnienia algebraicznego" << endl;

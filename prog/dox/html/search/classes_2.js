@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['wektor',['Wektor',['../class_wektor.html',1,'']]]
+  ['ukladrownanl',['UkladRownanL',['../class_uklad_rownan_l.html',1,'']]]
 ];

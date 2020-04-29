@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['wektor',['Wektor',['../class_wektor.html#a8cfda216bee8ae0f1d1a5c1aaa012a04',1,'Wektor::Wektor()'],['../class_wektor.html#a7d799990f2f5a768e2e2d2380d2d8e3d',1,'Wektor::Wektor(TYP *tabela)']]],
-  ['wyznacznik',['wyznacznik',['../class_macierz_kw.html#a757632e9a6d208c5a7a55aed2747e407',1,'MacierzKw::wyznacznik(Wyz_Metoda metoda) const'],['../class_macierz_kw.html#ac638d06745a5b02db92b84452efcf2c9',1,'MacierzKw::wyznacznik(Wyz_Metoda metoda) const'],['../class_macierz_kw.html#a0b30c6d3e92cee62c9a7c6cc64ef54b3',1,'MacierzKw::wyznacznik(Wyz_Metoda metoda) const'],['../class_macierz_kw.html#ac638d06745a5b02db92b84452efcf2c9',1,'MacierzKw::wyznacznik(Wyz_Metoda metoda) const'],['../class_macierz_kw.html#a0b30c6d3e92cee62c9a7c6cc64ef54b3',1,'MacierzKw::wyznacznik(Wyz_Metoda metoda) const']]]
+  ['set_5fa',['set_A',['../class_uklad_rownan_l.html#aac0a0afd969e6ac14313574542ed045b',1,'UkladRownanL']]],
+  ['set_5fb',['set_b',['../class_uklad_rownan_l.html#ab85af018b8df4b3124f3f8d86d73fa4e',1,'UkladRownanL']]],
+  ['sprzez',['sprzez',['../struct_l_zespolona.html#afb52afc8b3ee62b9f3c0a2097c761597',1,'LZespolona']]]
 ];

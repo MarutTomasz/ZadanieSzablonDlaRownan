@@ -21,5 +21,7 @@ var _c_wektor_8cpp =
     [ "operator>>", "_c_wektor_8cpp.html#a3e3ac4ef9d885431608cbbfecca1d890", null ],
     [ "operator>>", "_c_wektor_8cpp.html#aa07403a8f692c2591b9a32fe61f54120", null ],
     [ "operator>>", "_c_wektor_8cpp.html#a74ece33ae1a39ea8c490d555bd4110f0", null ],
-    [ "operator>>", "_c_wektor_8cpp.html#a4bdc79a0078583bf8e135a876e64e5e1", null ]
+    [ "operator>>", "_c_wektor_8cpp.html#a4bdc79a0078583bf8e135a876e64e5e1", null ],
+    [ "wyswietl_wektor_bledu", "_c_wektor_8cpp.html#a39002dba05dd920e8073d0af15591bbb", null ],
+    [ "wyswietl_wektor_bledu", "_c_wektor_8cpp.html#a0ecf548cd5963aad3263790432f61fee", null ]
 ];

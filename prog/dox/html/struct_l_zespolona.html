@@ -16,6 +16,9 @@
 <script type="text/javascript">
   $(document).ready(initResizable);
 </script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -35,11 +38,15 @@
 </div>
 <!-- end header part -->
 <!-- Wygenerowano przez Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+</script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
 $(function() {
-  initMenu('',false,false,'search.php','Szukaj');
+  initMenu('',true,false,'search.php','Szukaj');
+  $(document).ready(function() { init_search(); });
 });
 </script>
 <div id="main-nav"></div>
@@ -58,6 +65,20 @@ $(function() {
 $(document).ready(function(){initNavTree('struct_l_zespolona.html','');});
 </script>
 <div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Metody publiczne</a> &#124;
@@ -142,7 +163,7 @@ Atrybuty publiczne</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Opis szczegółowy</h2>
 <div class="textblock"><p>Struktura modeluje pojęcie liczby zespolonej przedstawianej jako cześć rzeczywista re i część urojona im. Zawiera metody podsawowych operacji na liczbie zespolonej. </p>
 
-<p class="definition">Definicja w linii <a class="el" href="_l_zespolona_8hh_source.html#l00029">29</a> pliku <a class="el" href="_l_zespolona_8hh_source.html">LZespolona.hh</a>.</p>
+<p class="definition">Definicja w linii <a class="el" href="_l_zespolona_8hh_source.html#l00030">30</a> pliku <a class="el" href="_l_zespolona_8hh_source.html">LZespolona.hh</a>.</p>
 </div><h2 class="groupheader">Dokumentacja konstruktora i destruktora</h2>
 <a id="a21fe2844a13cde80d7b00b891676296a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a21fe2844a13cde80d7b00b891676296a">&#9670;&nbsp;</a></span>LZespolona() <span class="overload">[1/2]</span></h2>
@@ -219,6 +240,22 @@ Atrybuty publiczne</h2></td></tr>
 <p>Oblicza wartość modułu liczby zespolonej. </p><dl class="section return"><dt>Zwraca</dt><dd>Zwraca moduł liczby zespolonej. </dd></dl>
 
 <p class="definition">Definicja w linii <a class="el" href="_l_zespolona_8cpp_source.html#l00131">131</a> pliku <a class="el" href="_l_zespolona_8cpp_source.html">LZespolona.cpp</a>.</p>
+<div class="dynheader">
+Oto graf wywoływań tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="struct_l_zespolona_a23bbbbee23b72627e8f0d53ead772560_icgraph.png" border="0" usemap="#struct_l_zespolona_a23bbbbee23b72627e8f0d53ead772560_icgraph" alt=""/></div>
+<map name="struct_l_zespolona_a23bbbbee23b72627e8f0d53ead772560_icgraph" id="struct_l_zespolona_a23bbbbee23b72627e8f0d53ead772560_icgraph">
+<area shape="rect" id="node2" href="_l_zespolona_8cpp.html#abb8ae3c4390ba65656440b381b51de04" title="Wartość bezwzględna modułu. " alt="" coords="185,199,228,225"/>
+<area shape="rect" id="node3" href="class_macierz_kw.html#a214ad8c79c927c5fd645c68a296129d1" title="Przeciążenie operatora porównania. " alt="" coords="279,5,437,32"/>
+<area shape="rect" id="node4" href="class_macierz_kw.html#a27c42db5c70afea027e0c42f89c87e60" title="Oblicza wyznacznik macierzy. " alt="" coords="276,173,440,200"/>
+<area shape="rect" id="node6" href="class_macierz_kw.html#ac7cb6fdb03634683f6d31a14bbba22f2" title="Tworzy macierz odwrotną " alt="" coords="700,115,837,141"/>
+<area shape="rect" id="node7" href="class_uklad_rownan_l.html#af0474be2743b24dbe7d48f07f26b08b1" title="Rozwiązuje układ równań metodą Cramera. " alt="" coords="488,225,652,266"/>
+<area shape="rect" id="node9" href="class_uklad_rownan_l.html#a512e5ffa5f8f9b2f725c5f3da13714c7" title="Rozwiązuje układ równań metodą eliminacji Gaussa. " alt="" coords="488,290,652,331"/>
+<area shape="rect" id="node10" href="class_wektor.html#a230f485e33c2be784955d8b70cb1ab2c" title="Przeciążenie operatora porównania. " alt="" coords="291,325,425,352"/>
+<area shape="rect" id="node5" href="class_macierz_kw.html#a99c157867ea2d3b7a82a0621ad557c2f" title="Tworzy macierz dopełniej algebraicznych. " alt="" coords="499,107,641,149"/>
+<area shape="rect" id="node8" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="743,264,794,291"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -239,6 +276,14 @@ Atrybuty publiczne</h2></td></tr>
 <p>Oblicza kwadrat modułu liczby zespolonej. </p><dl class="section return"><dt>Zwraca</dt><dd>Zwraca kwadrat modułu liczby zespolonej. </dd></dl>
 
 <p class="definition">Definicja w linii <a class="el" href="_l_zespolona_8cpp_source.html#l00126">126</a> pliku <a class="el" href="_l_zespolona_8cpp_source.html">LZespolona.cpp</a>.</p>
+<div class="dynheader">
+Oto graf wywoływań tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="struct_l_zespolona_a25b4f3d612072e4b70076209d64a5ce6_icgraph.png" border="0" usemap="#struct_l_zespolona_a25b4f3d612072e4b70076209d64a5ce6_icgraph" alt=""/></div>
+<map name="struct_l_zespolona_a25b4f3d612072e4b70076209d64a5ce6_icgraph" id="struct_l_zespolona_a25b4f3d612072e4b70076209d64a5ce6_icgraph">
+<area shape="rect" id="node2" href="struct_l_zespolona.html#a2533342a016217ff43769ebfe4d3ff6a" title="Przeciążenie operatora dzielenia. " alt="" coords="192,5,340,32"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -494,6 +539,15 @@ Atrybuty publiczne</h2></td></tr>
 <dl class="section return"><dt>Zwraca</dt><dd>Zwraca liczbę zespoloną po dokonaniu operacji dzielenia. </dd></dl>
 
 <p class="definition">Definicja w linii <a class="el" href="_l_zespolona_8cpp_source.html#l00085">85</a> pliku <a class="el" href="_l_zespolona_8cpp_source.html">LZespolona.cpp</a>.</p>
+<div class="dynheader">
+Oto graf wywołań dla tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="struct_l_zespolona_a2533342a016217ff43769ebfe4d3ff6a_cgraph.png" border="0" usemap="#struct_l_zespolona_a2533342a016217ff43769ebfe4d3ff6a_cgraph" alt=""/></div>
+<map name="struct_l_zespolona_a2533342a016217ff43769ebfe4d3ff6a_cgraph" id="struct_l_zespolona_a2533342a016217ff43769ebfe4d3ff6a_cgraph">
+<area shape="rect" id="node2" href="struct_l_zespolona.html#afb52afc8b3ee62b9f3c0a2097c761597" title="Oblicza sprzężenie liczby zespolonej. " alt="" coords="203,5,339,32"/>
+<area shape="rect" id="node3" href="struct_l_zespolona.html#a25b4f3d612072e4b70076209d64a5ce6" title="Oblicza kwadrat modułu. " alt="" coords="201,56,340,83"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -634,6 +688,14 @@ Atrybuty publiczne</h2></td></tr>
 <p>Oblicza sprzęzenie do liczby zespolonej. </p><dl class="section return"><dt>Zwraca</dt><dd>Zwraca obliczoną liczbę sprzężoną. </dd></dl>
 
 <p class="definition">Definicja w linii <a class="el" href="_l_zespolona_8cpp_source.html#l00119">119</a> pliku <a class="el" href="_l_zespolona_8cpp_source.html">LZespolona.cpp</a>.</p>
+<div class="dynheader">
+Oto graf wywoływań tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="struct_l_zespolona_afb52afc8b3ee62b9f3c0a2097c761597_icgraph.png" border="0" usemap="#struct_l_zespolona_afb52afc8b3ee62b9f3c0a2097c761597_icgraph" alt=""/></div>
+<map name="struct_l_zespolona_afb52afc8b3ee62b9f3c0a2097c761597_icgraph" id="struct_l_zespolona_afb52afc8b3ee62b9f3c0a2097c761597_icgraph">
+<area shape="rect" id="node2" href="struct_l_zespolona.html#a2533342a016217ff43769ebfe4d3ff6a" title="Przeciążenie operatora dzielenia. " alt="" coords="189,5,337,32"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -651,7 +713,7 @@ Atrybuty publiczne</h2></td></tr>
 </div><div class="memdoc">
 <p>Pole reprezentujące część urojoną liczby zespolonej </p>
 
-<p class="definition">Definicja w linii <a class="el" href="_l_zespolona_8hh_source.html#l00041">41</a> pliku <a class="el" href="_l_zespolona_8hh_source.html">LZespolona.hh</a>.</p>
+<p class="definition">Definicja w linii <a class="el" href="_l_zespolona_8hh_source.html#l00042">42</a> pliku <a class="el" href="_l_zespolona_8hh_source.html">LZespolona.hh</a>.</p>
 
 </div>
 </div>
@@ -668,7 +730,7 @@ Atrybuty publiczne</h2></td></tr>
 </div><div class="memdoc">
 <p>Pole reprezentujące część rzeczywistą liczby zespolonej </p>
 
-<p class="definition">Definicja w linii <a class="el" href="_l_zespolona_8hh_source.html#l00035">35</a> pliku <a class="el" href="_l_zespolona_8hh_source.html">LZespolona.hh</a>.</p>
+<p class="definition">Definicja w linii <a class="el" href="_l_zespolona_8hh_source.html#l00036">36</a> pliku <a class="el" href="_l_zespolona_8hh_source.html">LZespolona.hh</a>.</p>
 
 </div>
 </div>

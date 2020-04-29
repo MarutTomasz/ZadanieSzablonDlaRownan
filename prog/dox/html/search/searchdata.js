@@ -1,10 +1,10 @@
 var indexSectionsWithContent =
 {
-  0: "acdgilmoprstwz",
-  1: "lmw",
+  0: "abcdgilmoprstuwz",
+  1: "lmuw",
   2: "clms",
-  3: "adlmopstwz",
-  4: "irt",
+  3: "adglmoprstuwz",
+  4: "abirt",
   5: "ow",
   6: "dgl"
 };
@@ -22,12 +22,12 @@ var indexSectionNames =
 
 var indexSectionLabels =
 {
-  0: "All",
-  1: "Classes",
-  2: "Files",
-  3: "Functions",
-  4: "Variables",
-  5: "Enumerations",
-  6: "Enumerator"
+  0: "Wszystko",
+  1: "Klasy",
+  2: "Pliki",
+  3: "Funkcje",
+  4: "Zmienne",
+  5: "Wyliczenia",
+  6: "Wartości wyliczeń"
 };
 

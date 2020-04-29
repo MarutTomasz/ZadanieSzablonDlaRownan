@@ -16,6 +16,9 @@
 <script type="text/javascript">
   $(document).ready(initResizable);
 </script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -35,11 +38,15 @@
 </div>
 <!-- end header part -->
 <!-- Wygenerowano przez Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+</script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
 $(function() {
-  initMenu('',false,false,'search.php','Szukaj');
+  initMenu('',true,false,'search.php','Szukaj');
+  $(document).ready(function() { init_search(); });
 });
 </script>
 <div id="main-nav"></div>
@@ -58,6 +65,20 @@ $(function() {
 $(document).ready(function(){initNavTree('_c_uklad_rownan_l_8cpp.html','');});
 </script>
 <div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
 <div class="header">
   <div class="summary">
 <a href="#func-members">Funkcje</a>  </div>
@@ -65,7 +86,22 @@ $(document).ready(function(){initNavTree('_c_uklad_rownan_l_8cpp.html','');});
 <div class="title">Dokumentacja pliku CUkladRownanL.cpp</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Jawne konkretyzacje szablonu klasy <a class="el" href="class_uklad_rownan_l.html" title="Modeluje pojęcie UkladRownanL. ">UkladRownanL</a>.  
+<a href="#details">Więcej...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="_s_uklad_rownan_l_8cpp_source.html">SUkladRownanL.cpp</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Wykres zależności załączania dla CUkladRownanL.cpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="_c_uklad_rownan_l_8cpp__incl.png" border="0" usemap="#_2home_2tomasz_2_zadanie_szablon_dla_rownan_2prog_2prj_2src_2_c_uklad_rownan_l_8cpp" alt=""/></div>
+<map name="_2home_2tomasz_2_zadanie_szablon_dla_rownan_2prog_2prj_2src_2_c_uklad_rownan_l_8cpp" id="_2home_2tomasz_2_zadanie_szablon_dla_rownan_2prog_2prj_2src_2_c_uklad_rownan_l_8cpp">
+<area shape="rect" id="node2" href="_s_uklad_rownan_l_8cpp.html" title="Definicje metod i funkcji klasy UkladRownanL. " alt="" coords="76,95,221,121"/>
+<area shape="rect" id="node3" href="_s_uklad_rownan_l_8hh.html" title="Definicja szablonu klasy UkladRownanL. " alt="" coords="79,169,218,196"/>
+<area shape="rect" id="node4" href="_s_wektor_8hh.html" title="Definicja szablonu klasy Wektor. " alt="" coords="177,319,267,345"/>
+<area shape="rect" id="node5" href="_l_zespolona_8hh.html" title="Definicja struktury LZespolona. " alt="" coords="65,393,171,420"/>
+<area shape="rect" id="node9" href="_s_macierz_kw_8hh.html" title="Definicja szablonu klasy MacierzKw. " alt="" coords="91,244,206,271"/>
+</map>
+</div>
 </div>
 <p><a href="_c_uklad_rownan_l_8cpp_source.html">Idź do kodu źródłowego tego pliku.</a></p>
 <table class="memberdecls">
@@ -80,7 +116,12 @@ Funkcje</h2></td></tr>
 <tr class="memitem:ab91056ddb38a3777c9637437839dd329"><td class="memItemLeft" align="right" valign="top">template std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_c_uklad_rownan_l_8cpp.html#ab91056ddb38a3777c9637437839dd329">operator&lt;&lt;</a> (std::ostream &amp;strm, const <a class="el" href="class_uklad_rownan_l.html">UkladRownanL</a>&lt; <a class="el" href="struct_l_zespolona.html">LZespolona</a>, 5 &gt; &amp;U)</td></tr>
 <tr class="separator:ab91056ddb38a3777c9637437839dd329"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Dokumentacja funkcji</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Opis szczegółowy</h2>
+<div class="textblock"><p>Plik zawiera jawne konkretyzacje szablonu i funkcji nie należących do klasy <a class="el" href="class_uklad_rownan_l.html" title="Modeluje pojęcie UkladRownanL. ">UkladRownanL</a>. <br />
+</p><dl class="section attention"><dt>Uwaga</dt><dd>Funkcje w tym pliku nie są udokumentowane, ponieważ są to tylko konkretyzacje opisanych już funkcji. </dd></dl>
+
+<p class="definition">Definicja w pliku <a class="el" href="_c_uklad_rownan_l_8cpp_source.html">CUkladRownanL.cpp</a>.</p>
+</div><h2 class="groupheader">Dokumentacja funkcji</h2>
 <a id="a5c04d4b5c3278785994651abccf8f0a6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5c04d4b5c3278785994651abccf8f0a6">&#9670;&nbsp;</a></span>operator<<() <span class="overload">[1/2]</span></h2>
 

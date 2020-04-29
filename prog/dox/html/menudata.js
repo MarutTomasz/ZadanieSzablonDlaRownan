@@ -50,6 +50,7 @@ var menudata={children:[
 {text:"a",url:"globals_func.html#index_a"},
 {text:"m",url:"globals_func.html#index_m"},
 {text:"o",url:"globals_func.html#index_o"},
-{text:"p",url:"globals_func.html#index_p"}]},
+{text:"p",url:"globals_func.html#index_p"},
+{text:"w",url:"globals_func.html#index_w"}]},
 {text:"Wyliczenia",url:"globals_enum.html"},
 {text:"Wartości wyliczeń",url:"globals_eval.html"}]}]}]}

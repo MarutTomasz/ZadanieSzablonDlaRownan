@@ -16,6 +16,9 @@
 <script type="text/javascript">
   $(document).ready(initResizable);
 </script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -35,11 +38,15 @@
 </div>
 <!-- end header part -->
 <!-- Wygenerowano przez Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+</script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
 $(function() {
-  initMenu('',false,false,'search.php','Szukaj');
+  initMenu('',true,false,'search.php','Szukaj');
+  $(document).ready(function() { init_search(); });
 });
 </script>
 <div id="main-nav"></div>
@@ -58,13 +65,27 @@ $(function() {
 $(document).ready(function(){initNavTree('_c_uklad_rownan_l_8cpp_source.html','');});
 </script>
 <div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
 <div class="header">
   <div class="headertitle">
 <div class="title">CUkladRownanL.cpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="_c_uklad_rownan_l_8cpp.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_s_uklad_rownan_l_8cpp.html">SUkladRownanL.cpp</a>&quot;</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">template</span> <span class="keyword">class </span><a class="code" href="class_uklad_rownan_l.html">UkladRownanL&lt;double,5&gt;</a>;</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">template</span> std::istream &amp; <a class="code" href="_c_uklad_rownan_l_8cpp.html#af8ec056ecfda0f7f5d4d8f4e903847ec">operator &gt;&gt; </a>(std::istream &amp;strm, <a class="code" href="class_uklad_rownan_l.html">UkladRownanL&lt;double,5&gt;</a> &amp;U);</div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">template</span> std::ostream &amp; operator &lt;&lt; (std::ostream &amp;strm, const UkladRownanL&lt;double,5&gt; &amp;U);</div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">template</span> <span class="keyword">class </span><a class="code" href="class_uklad_rownan_l.html">UkladRownanL&lt;LZespolona,5&gt;</a>;</div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">template</span> std::istream &amp; <a class="code" href="_c_uklad_rownan_l_8cpp.html#af8ec056ecfda0f7f5d4d8f4e903847ec">operator &gt;&gt; </a>(std::istream &amp;strm, <a class="code" href="class_uklad_rownan_l.html">UkladRownanL&lt;LZespolona,5&gt;</a> &amp;U);</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">template</span> std::ostream &amp; operator &lt;&lt; (std::ostream &amp;strm, const UkladRownanL&lt;LZespolona,5&gt; &amp;U);</div><div class="ttc" id="_s_uklad_rownan_l_8cpp_html"><div class="ttname"><a href="_s_uklad_rownan_l_8cpp.html">SUkladRownanL.cpp</a></div></div>
-<div class="ttc" id="class_uklad_rownan_l_html"><div class="ttname"><a href="class_uklad_rownan_l.html">UkladRownanL</a></div><div class="ttdef"><b>Definition:</b> <a href="_s_uklad_rownan_l_8hh_source.html#l00015">SUkladRownanL.hh:15</a></div></div>
+<a href="_c_uklad_rownan_l_8cpp.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_s_uklad_rownan_l_8cpp.html">SUkladRownanL.cpp</a>&quot;</span></div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">template</span> <span class="keyword">class </span><a class="code" href="class_uklad_rownan_l.html">UkladRownanL&lt;double,5&gt;</a>;</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">template</span> std::istream &amp; <a class="code" href="_c_uklad_rownan_l_8cpp.html#af8ec056ecfda0f7f5d4d8f4e903847ec">operator &gt;&gt; </a>(std::istream &amp;strm, <a class="code" href="class_uklad_rownan_l.html">UkladRownanL&lt;double,5&gt;</a> &amp;U);</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">template</span> std::ostream &amp; operator &lt;&lt; (std::ostream &amp;strm, const UkladRownanL&lt;double,5&gt; &amp;U);</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">template</span> <span class="keyword">class </span><a class="code" href="class_uklad_rownan_l.html">UkladRownanL&lt;LZespolona,5&gt;</a>;</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">template</span> std::istream &amp; <a class="code" href="_c_uklad_rownan_l_8cpp.html#af8ec056ecfda0f7f5d4d8f4e903847ec">operator &gt;&gt; </a>(std::istream &amp;strm, <a class="code" href="class_uklad_rownan_l.html">UkladRownanL&lt;LZespolona,5&gt;</a> &amp;U);</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">template</span> std::ostream &amp; operator &lt;&lt; (std::ostream &amp;strm, const UkladRownanL&lt;LZespolona,5&gt; &amp;U);</div><div class="ttc" id="_s_uklad_rownan_l_8cpp_html"><div class="ttname"><a href="_s_uklad_rownan_l_8cpp.html">SUkladRownanL.cpp</a></div><div class="ttdoc">Definicje metod i funkcji klasy UkladRownanL. </div></div>
+<div class="ttc" id="class_uklad_rownan_l_html"><div class="ttname"><a href="class_uklad_rownan_l.html">UkladRownanL</a></div><div class="ttdoc">Modeluje pojęcie UkladRownanL. </div><div class="ttdef"><b>Definition:</b> <a href="_s_uklad_rownan_l_8hh_source.html#l00027">SUkladRownanL.hh:27</a></div></div>
 <div class="ttc" id="_c_uklad_rownan_l_8cpp_html_af8ec056ecfda0f7f5d4d8f4e903847ec"><div class="ttname"><a href="_c_uklad_rownan_l_8cpp.html#af8ec056ecfda0f7f5d4d8f4e903847ec">operator&gt;&gt;</a></div><div class="ttdeci">template std::istream &amp; operator&gt;&gt;(std::istream &amp;strm, UkladRownanL&lt; double, 5 &gt; &amp;U)</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

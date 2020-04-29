@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['cmacierzkw_2ecpp',['CMacierzKw.cpp',['../_c_macierz_kw_8cpp.html',1,'']]],
-  ['cwektor_2ecpp',['CWektor.cpp',['../_c_wektor_8cpp.html',1,'']]]
+  ['b',['b',['../class_uklad_rownan_l.html#a21e27d1ff458bf50a688441a2897fe15',1,'UkladRownanL']]]
 ];

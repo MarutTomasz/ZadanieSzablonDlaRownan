@@ -16,6 +16,9 @@
 <script type="text/javascript">
   $(document).ready(initResizable);
 </script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -35,11 +38,15 @@
 </div>
 <!-- end header part -->
 <!-- Wygenerowano przez Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+</script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
 $(function() {
-  initMenu('',false,false,'search.php','Szukaj');
+  initMenu('',true,false,'search.php','Szukaj');
+  $(document).ready(function() { init_search(); });
 });
 </script>
 <div id="main-nav"></div>
@@ -58,17 +65,44 @@ $(function() {
 $(document).ready(function(){initNavTree('dir_400757c3a0df52e783ed9699284f29ce.html','');});
 </script>
 <div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
 <div class="header">
   <div class="headertitle">
 <div class="title">Dokumentacja katalogu src</div>  </div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Wykres zależności katalogu dla src:</div>
+<div class="dyncontent">
+<div class="center"><img src="dir_400757c3a0df52e783ed9699284f29ce_dep.png" border="0" usemap="#dir__400757c3a0df52e783ed9699284f29ce__dep" alt="/home/tomasz/ZadanieSzablonDlaRownan/prog/prj/src"/></div>
+<map name="dir__400757c3a0df52e783ed9699284f29ce__dep" id="dir__400757c3a0df52e783ed9699284f29ce__dep">
+<area shape="rect" id="node1" href="dir_400757c3a0df52e783ed9699284f29ce.html" title="src" alt="" coords="27,52,99,100"/>
+<area shape="rect" id="node2" href="dir_72345776cd6700fb0dedb8f1faaa0c00.html" title="inc" alt="" coords="27,148,99,196"/>
+<area shape="rect" id="edge1-headlabel" href="dir_000002_000001.html" title="8" alt="" coords="67,122,75,137"/>
+<area shape="rect" id="clust1" href="dir_4aa64b0872d36146e049722e293482e3.html" title="prj" alt="" coords="16,16,109,111"/>
+</map>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="files"></a>
 Pliki</h2></td></tr>
 <tr class="memitem:_c_macierz_kw_8cpp"><td class="memItemLeft" align="right" valign="top">plik &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_c_macierz_kw_8cpp.html">CMacierzKw.cpp</a> <a href="_c_macierz_kw_8cpp_source.html">[kod źródłowy]</a></td></tr>
+<tr class="memdesc:_c_macierz_kw_8cpp"><td class="mdescLeft">&#160;</td><td class="mdescRight">Jawne konkretyzacje szablonu klasy <a class="el" href="class_macierz_kw.html" title="Modeluje pojęcie MacierzKw. ">MacierzKw</a>. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:_c_uklad_rownan_l_8cpp"><td class="memItemLeft" align="right" valign="top">plik &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_c_uklad_rownan_l_8cpp.html">CUkladRownanL.cpp</a> <a href="_c_uklad_rownan_l_8cpp_source.html">[kod źródłowy]</a></td></tr>
+<tr class="memdesc:_c_uklad_rownan_l_8cpp"><td class="mdescLeft">&#160;</td><td class="mdescRight">Jawne konkretyzacje szablonu klasy <a class="el" href="class_uklad_rownan_l.html" title="Modeluje pojęcie UkladRownanL. ">UkladRownanL</a>. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:_c_wektor_8cpp"><td class="memItemLeft" align="right" valign="top">plik &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_c_wektor_8cpp.html">CWektor.cpp</a> <a href="_c_wektor_8cpp_source.html">[kod źródłowy]</a></td></tr>
 <tr class="memdesc:_c_wektor_8cpp"><td class="mdescLeft">&#160;</td><td class="mdescRight">Jawne konkretyzacje szablonu klasy <a class="el" href="class_wektor.html" title="Modeluje pojęcie Wektor. ">Wektor</a>. <br /></td></tr>
@@ -77,10 +111,13 @@ Pliki</h2></td></tr>
 <tr class="memdesc:_l_zespolona_8cpp"><td class="mdescLeft">&#160;</td><td class="mdescRight">Definicje metod i funkcji dla struktury <a class="el" href="struct_l_zespolona.html" title="Modeluje pojęcie LZespolona. ">LZespolona</a>. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:main_8cpp"><td class="memItemLeft" align="right" valign="top">plik &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html">main.cpp</a> <a href="main_8cpp_source.html">[kod źródłowy]</a></td></tr>
+<tr class="memdesc:main_8cpp"><td class="mdescLeft">&#160;</td><td class="mdescRight">Główny plik z programem wykonawczym. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:_s_macierz_kw_8cpp"><td class="memItemLeft" align="right" valign="top">plik &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_s_macierz_kw_8cpp.html">SMacierzKw.cpp</a> <a href="_s_macierz_kw_8cpp_source.html">[kod źródłowy]</a></td></tr>
+<tr class="memdesc:_s_macierz_kw_8cpp"><td class="mdescLeft">&#160;</td><td class="mdescRight">Definicje metod i funkcji klasy <a class="el" href="class_macierz_kw.html" title="Modeluje pojęcie MacierzKw. ">MacierzKw</a>. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:_s_uklad_rownan_l_8cpp"><td class="memItemLeft" align="right" valign="top">plik &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_s_uklad_rownan_l_8cpp.html">SUkladRownanL.cpp</a> <a href="_s_uklad_rownan_l_8cpp_source.html">[kod źródłowy]</a></td></tr>
+<tr class="memdesc:_s_uklad_rownan_l_8cpp"><td class="mdescLeft">&#160;</td><td class="mdescRight">Definicje metod i funkcji klasy <a class="el" href="class_uklad_rownan_l.html" title="Modeluje pojęcie UkladRownanL. ">UkladRownanL</a>. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:_s_wektor_8cpp"><td class="memItemLeft" align="right" valign="top">plik &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_s_wektor_8cpp.html">SWektor.cpp</a> <a href="_s_wektor_8cpp_source.html">[kod źródłowy]</a></td></tr>
 <tr class="memdesc:_s_wektor_8cpp"><td class="mdescLeft">&#160;</td><td class="mdescRight">Definicje metod i funkcji klasy <a class="el" href="class_wektor.html" title="Modeluje pojęcie Wektor. ">Wektor</a>. <br /></td></tr>

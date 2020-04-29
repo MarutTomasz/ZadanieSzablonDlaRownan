@@ -7,7 +7,6 @@
  * na klasie Wektor oraz specjalizacje wybranych metod. \n
  */
 
-
 /********** SET I GET **********/
 template<class TYP, unsigned int ROZMIAR>
 TYP & Wektor<TYP,ROZMIAR>::operator [] (unsigned int index){
@@ -51,7 +50,7 @@ std::istream & operator>>(std::istream &strm, Wektor<TYP,ROZMIAR> &W){
 template<class TYP, unsigned int ROZMIAR>
 std::ostream & operator << (std::ostream &strm, const Wektor<TYP,ROZMIAR> &W) {
   for (unsigned int i=0; i<ROZMIAR; ++i)
-    cout << W[i] << "  ";
+    cout << " " << W[i] << " ";
   return strm;
 }
 
@@ -158,8 +157,8 @@ template<class TYP, unsigned int ROZMIAR>
 void wyswietl_wektor_bledu(const Wektor<TYP,ROZMIAR> &W) {
   cout << scientific;
   cout << setprecision(2);
-  cout << "Wektor bledu:  Ax-b = (  " << W << ")" << endl;
-  cout << "Dlugosc wektora bledu: |Ax-b| = " << W.dlugosc() << endl << endl << endl;
+  cout << "Wektor bledu:  Ax-b = (" << W << ")" << endl;
+  cout << "Dlugosc wektora bledu: ||Ax-b|| = " << W.dlugosc() << endl << endl << endl;
   cout << defaultfloat;
 }
 

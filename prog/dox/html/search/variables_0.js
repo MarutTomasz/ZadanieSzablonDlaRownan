@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['im',['im',['../struct_l_zespolona.html#abcaf274a7a8279740e7752cd783439df',1,'LZespolona']]]
+  ['a',['A',['../class_uklad_rownan_l.html#a02f16b84fce9f22c56082f0ffe3f88f0',1,'UkladRownanL']]]
 ];

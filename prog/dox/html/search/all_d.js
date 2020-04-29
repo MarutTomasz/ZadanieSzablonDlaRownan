@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['zmien_5fkolumne',['zmien_kolumne',['../class_macierz_kw.html#ab37ac70785444464299a908593a894b4',1,'MacierzKw']]],
-  ['zmien_5fwiersz',['zmien_wiersz',['../class_macierz_kw.html#a7cc45ebdcb227731591f5d2304ca88f1',1,'MacierzKw']]]
+  ['ukladrownanl',['UkladRownanL',['../class_uklad_rownan_l.html',1,'UkladRownanL&lt; TYP, ROZMIAR &gt;'],['../class_uklad_rownan_l.html#a16062bc1ded039952cb375200140bb0e',1,'UkladRownanL::UkladRownanL()'],['../class_uklad_rownan_l.html#abe8b34148f4ddcb91e5a8529d9184c13',1,'UkladRownanL::UkladRownanL(const MacierzKw&lt; TYP, ROZMIAR &gt; &amp;M, const Wektor&lt; TYP, ROZMIAR &gt; &amp;W)']]]
 ];

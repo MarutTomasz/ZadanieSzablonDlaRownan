@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['lzespolona',['LZespolona',['../struct_l_zespolona.html#a21fe2844a13cde80d7b00b891676296a',1,'LZespolona::LZespolona()'],['../struct_l_zespolona.html#aff245bc5a76626a5fb541909f1783433',1,'LZespolona::LZespolona(double RE, double IM)']]]
+  ['get_5fa',['get_A',['../class_uklad_rownan_l.html#a5fc3d7a806f4db6afbfaff5d86b14bc0',1,'UkladRownanL']]],
+  ['get_5fb',['get_b',['../class_uklad_rownan_l.html#a3ce19d6578329386818d543aea80b491',1,'UkladRownanL']]]
 ];

@@ -16,6 +16,9 @@
 <script type="text/javascript">
   $(document).ready(initResizable);
 </script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -35,11 +38,15 @@
 </div>
 <!-- end header part -->
 <!-- Wygenerowano przez Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+</script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
 $(function() {
-  initMenu('',false,false,'search.php','Szukaj');
+  initMenu('',true,false,'search.php','Szukaj');
+  $(document).ready(function() { init_search(); });
 });
 </script>
 <div id="main-nav"></div>
@@ -58,6 +65,20 @@ $(function() {
 $(document).ready(function(){initNavTree('main_8cpp.html','');});
 </script>
 <div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
 <div class="header">
   <div class="summary">
 <a href="#func-members">Funkcje</a>  </div>
@@ -65,10 +86,24 @@ $(document).ready(function(){initNavTree('main_8cpp.html','');});
 <div class="title">Dokumentacja pliku main.cpp</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Główny plik z programem wykonawczym.  
+<a href="#details">Więcej...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="_s_wektor_8hh_source.html">SWektor.hh</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_s_macierz_kw_8hh_source.html">SMacierzKw.hh</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_s_uklad_rownan_l_8hh_source.html">SUkladRownanL.hh</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_l_zespolona_8hh_source.html">LZespolona.hh</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Wykres zależności załączania dla main.cpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="main_8cpp__incl.png" border="0" usemap="#_2home_2tomasz_2_zadanie_szablon_dla_rownan_2prog_2prj_2src_2main_8cpp" alt=""/></div>
+<map name="_2home_2tomasz_2_zadanie_szablon_dla_rownan_2prog_2prj_2src_2main_8cpp" id="_2home_2tomasz_2_zadanie_szablon_dla_rownan_2prog_2prj_2src_2main_8cpp">
+<area shape="rect" id="node2" href="_s_wektor_8hh.html" title="Definicja szablonu klasy Wektor. " alt="" coords="211,244,302,271"/>
+<area shape="rect" id="node3" href="_l_zespolona_8hh.html" title="Definicja struktury LZespolona. " alt="" coords="71,319,178,345"/>
+<area shape="rect" id="node7" href="_s_macierz_kw_8hh.html" title="Definicja szablonu klasy MacierzKw. " alt="" coords="22,169,137,196"/>
+<area shape="rect" id="node8" href="_s_uklad_rownan_l_8hh.html" title="Definicja szablonu klasy UkladRownanL. " alt="" coords="102,95,241,121"/>
+</map>
+</div>
 </div>
 <p><a href="main_8cpp_source.html">Idź do kodu źródłowego tego pliku.</a></p>
 <table class="memberdecls">
@@ -92,8 +127,57 @@ Funkcje</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Program na wstępie pobiera symbol 'r' lub 'z' ze standardowego wejścia oznaczający typ wprowadzanych danych. <br />
+ Następnie pobiera dane do układu równań ze standardowego wejścia i po rozwiązaniu układu trzema róznymi metodami wyświetla wyniki wraz z błędami. <br />
+ Przykładowe wyświetlenie wyniku działania programu: </p><pre class="fragment">       Uklad rownan do rozwiazania:
+       | 2.00  2.00  1.00  3.00  3.00 | |x_1|   | 9.00 |
+       | 1.00  2.00  1.50  1.00  2.00 | |x_2|   | 8.00 |
+       | 1.00  3.00  1.00  2.00  2.00 | |x_3| = | 8.00 |
+       | 1.00  1.00  1.00  4.00  0.00 | |x_4|   | 9.00 |
+       | 2.00  2.00  0.00  0.00  1.00 | |x_5|   | 1.00 |
+       
+       ROZWIAZANIE METODA CRAMERA, WYZNACZNIK GAUSSEM
+       Rozwiazanie x = (x1, x2, x3, x4, x5):
+       -0.13  0.47  3.5  1.3  0.31 
+       
+       Wektor bledu:  Ax-b = ( -1.78e-15  -1.78e-15  -1.78e-15  0.00e+00  -2.89e-15 )
+       Dlugosc wektora bledu: ||Ax-b|| = 4.22e-15
+       
+       
+       ROZWIAZANIE METODA CRAMERA, WYZNACZNIK LAPLACEM
+       Rozwiazanie x = (x1, x2, x3, x4, x5):
+       -0.13  0.47  3.5  1.3  0.31 
+       
+       Wektor bledu:  Ax-b = ( 0.00e+00  0.00e+00  0.00e+00  0.00e+00  0.00e+00 )
+       Dlugosc wektora bledu: ||Ax-b|| = 0.00e+00
 
-<p class="definition">Definicja w linii <a class="el" href="main_8cpp_source.html#l00014">14</a> pliku <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+       
+       ROZWIAZANIE METODA GAUSSEM
+       Rozwiazanie x = (x1, x2, x3, x4, x5):
+       -0.13  0.47  3.5  1.3  0.31 
+       
+       Wektor bledu:  Ax-b = ( 0.00e+00  0.00e+00  0.00e+00  0.00e+00  2.22e-16 )
+       Dlugosc wektora bledu: ||Ax-b|| = 2.22e-16
+</pre> 
+<p class="definition">Definicja w linii <a class="el" href="main_8cpp_source.html#l00050">50</a> pliku <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<div class="dynheader">
+Oto graf wywołań dla tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.png" border="0" usemap="#main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph" alt=""/></div>
+<map name="main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph" id="main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph">
+<area shape="rect" id="node2" href="class_uklad_rownan_l.html#af0474be2743b24dbe7d48f07f26b08b1" title="Rozwiązuje układ równań metodą Cramera. " alt="" coords="104,74,268,115"/>
+<area shape="rect" id="node9" href="_s_wektor_8hh.html#a287fba929d3149ff9b003326329921e6" title="Specjalne wyswietlanie bledu. " alt="" coords="107,220,265,247"/>
+<area shape="rect" id="node11" href="class_uklad_rownan_l.html#a512e5ffa5f8f9b2f725c5f3da13714c7" title="Rozwiązuje układ równań metodą eliminacji Gaussa. " alt="" coords="327,158,491,199"/>
+<area shape="rect" id="node3" href="_l_zespolona_8hh.html#abb8ae3c4390ba65656440b381b51de04" title="Wartość bezwzględna modułu. " alt="" coords="622,56,665,83"/>
+<area shape="rect" id="node5" href="class_macierz_kw.html#a63dfcee5154f72f772cc62928fb1b1df" title="Podmienia kolumne macierzy. " alt="" coords="316,107,503,133"/>
+<area shape="rect" id="node6" href="class_macierz_kw.html#a27c42db5c70afea027e0c42f89c87e60" title="Oblicza wyznacznik macierzy. " alt="" coords="327,56,491,83"/>
+<area shape="rect" id="node4" href="struct_l_zespolona.html#a23bbbbee23b72627e8f0d53ead772560" title="Oblicza modułu. " alt="" coords="784,56,916,83"/>
+<area shape="rect" id="node7" href="class_macierz_kw.html#aefa9be7d7c2ab48fccf651ea3df84e99" title="Zamienia miejscami dwa wiersze. " alt="" coords="569,107,717,149"/>
+<area shape="rect" id="node8" href="_s_macierz_kw_8cpp.html#aa0ee43a9bd4eaa89aff31c0f2527150a" title="Tworzy macierz pomniejszoną względem wybranego elementu. " alt="" coords="576,5,711,32"/>
+<area shape="rect" id="node10" href="class_wektor.html#a2506fbd572c68588f1250bb0e3240d07" title="Wyliczenie długości wektora. " alt="" coords="351,224,468,251"/>
+<area shape="rect" id="node12" href="class_wektor.html#a50e7987b24d6450c0d66239da9d42991" title="Zamiana miejscami elementow wektora. " alt="" coords="551,173,736,200"/>
+</map>
+</div>
 
 </div>
 </div>

@@ -12,12 +12,13 @@
 
 #include <math.h>
 #include <iostream>
-using std::cout;
+
 using std::showpos;
 using std::noshowpos;
-using std::endl;
-using std::cin;
 using std::cerr;
+using std::cin;
+using std::cout;
+using std::endl;
 
 /*!
  * \brief Modeluje pojęcie LZespolona

@@ -1,4 +1,11 @@
 #include "SUkladRownanL.hh"
+/*!
+ * \file
+ * \brief Definicje metod i funkcji klasy UkladRownanL
+ *
+ * Plik zawiera definicje metod i funkcji działających
+ * na klasie UkladRownanL.
+ */
 
 /********** KONSTRUKTORY **********/
 template<class TYP, unsigned int ROZMIAR>
@@ -55,11 +62,11 @@ std::ostream & operator << (std::ostream &strm, const UkladRownanL<TYP,ROZMIAR> 
   Wektor<TYP,ROZMIAR> W = U.get_b();
   cout << fixed;
   cout << setprecision(2);
-  cout << "| " << M[0] << " | |x_1|   | " << W[0] << " |" << endl;
-  cout << "| " << M[1] << " | |x_2|   | " << W[1] << " |" << endl;
-  cout << "| " << M[2] << " | |x_3| = | " << W[2] << " |" << endl;
-  cout << "| " << M[3] << " | |x_4|   | " << W[3] << " |" << endl;
-  cout << "| " << M[4] << " | |x_5|   | " << W[4] << " |" << endl;
+  cout << "|" << M[0] << "| |x_1|   | " << W[0] << " |" << endl;
+  cout << "|" << M[1] << "| |x_2|   | " << W[1] << " |" << endl;
+  cout << "|" << M[2] << "| |x_3| = | " << W[2] << " |" << endl;
+  cout << "|" << M[3] << "| |x_4|   | " << W[3] << " |" << endl;
+  cout << "|" << M[4] << "| |x_5|   | " << W[4] << " |" << endl;
   cout << defaultfloat;
   return strm;
 }

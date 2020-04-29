@@ -10,8 +10,6 @@
  * na wektorach.
  */
 
-#include <iostream>
-#include <math.h>
 #include "LZespolona.hh"
 #include <iomanip>
 
@@ -20,11 +18,6 @@ using std::fixed;
 using std::defaultfloat;
 using std::scientific;
 
-
-using std::cerr;
-using std::cin;
-using std::cout;
-using std::endl;
 
 /*!
  * \brief Modeluje pojęcie Wektor
@@ -119,7 +112,7 @@ public:
   /*!
    * \brief Przeciążenie operatora dzielenia
    *
-   * Przeciążenie operatora odejmowania dla typu Wektor - TYP.
+   * Przeciążenie operatora dzielenia dla typu Wektor - TYP.
    * Dokonuje operacji dzielenia wektora przez skalar (TYP).
    * \param[in] liczba - dzielnik w postaci skalara (TYP) .
    * \return Zwraca wektor po dokonaniu operacji dzielenia.
@@ -178,8 +171,7 @@ public:
  * \param[in] W - wektor, ktorego wartości są wyświetlane.
  * \return Zwraca referencję do strumienia danych.
  * \attention  Strumień musi być poprawnie zainicjowany;\n
- *             W przypadku czytania błędnych wartości strumień psuje sie.
-*/
+ */
 template<class TYP, unsigned int ROZMIAR>
 std::ostream & operator<< (std::ostream &strm, const Wektor<TYP,ROZMIAR> &W);
 
@@ -192,7 +184,7 @@ std::ostream & operator<< (std::ostream &strm, const Wektor<TYP,ROZMIAR> &W);
  * \return Zwraca referencję do strumienia danych.
  * \attention  Strumień musi być poprawnie zainicjowany;\n
  *             W przypadku czytania błędnych wartości strumień psuje sie.
-*/
+ */
 template<class TYP, unsigned int ROZMIAR>
 std::istream & operator>> (std::istream &strm, Wektor<TYP,ROZMIAR> &W);
 
@@ -212,11 +204,22 @@ Wektor<TYP,ROZMIAR> operator * (TYP liczba, const Wektor<TYP,ROZMIAR> &W);
  * \brief Specjalne wyswietlanie bledu
  *
  * Specjalna funkcja zajmująca się wyświetlaniem wszystkich
- * informacji o wektorze błędu.
+ * informacji o wektorze błędu. \n
+ * Przykład wyświetlania informacji o wektorze błędu dla danych typu double:
+\verbatim
+        Wektor bledu:  Ax-b = ( -1.78e-15  -1.78e-15  -1.78e-15  0.00e+00  -2.89e-15 )
+        Dlugosc wektora bledu: ||Ax-b|| = 4.22e-15
+\endverbatim
+ * Przykład wyświetlania informacji o wektorze błędu dla danych typu LZespolona:
+\verbatim
+        Wektor bledu:  Ax-b = ( (3.55e-15+1.78e-15i)  (1.78e-15-4.00e-15i)  (-3.55e-15+0.00e+00i)  (0.00e+00-8.88e-16i)  (1.24e-14-6.44e-15i) )
+        Dlugosc wektora bledu: ||Ax-b|| = 1.56e-14
+\endverbatim
  * \param[in] W - wektor błędy do wyświetlenia.
  */
 template<class TYP, unsigned int ROZMIAR>
 void wyswietl_wektor_bledu(const Wektor<TYP,ROZMIAR> &W);
+
 
 /*   SPECJALIZACJE 
 template<>

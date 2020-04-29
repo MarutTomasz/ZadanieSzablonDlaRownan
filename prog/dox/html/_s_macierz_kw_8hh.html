@@ -16,6 +16,9 @@
 <script type="text/javascript">
   $(document).ready(initResizable);
 </script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -35,11 +38,15 @@
 </div>
 <!-- end header part -->
 <!-- Wygenerowano przez Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+</script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
 $(function() {
-  initMenu('',false,false,'search.php','Szukaj');
+  initMenu('',true,false,'search.php','Szukaj');
+  $(document).ready(function() { init_search(); });
 });
 </script>
 <div id="main-nav"></div>
@@ -58,6 +65,20 @@ $(function() {
 $(document).ready(function(){initNavTree('_s_macierz_kw_8hh.html','');});
 </script>
 <div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Komponenty</a> &#124;
@@ -67,43 +88,80 @@ $(document).ready(function(){initNavTree('_s_macierz_kw_8hh.html','');});
 <div class="title">Dokumentacja pliku SMacierzKw.hh</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Definicja szablonu klasy <a class="el" href="class_macierz_kw.html" title="Modeluje pojęcie MacierzKw. ">MacierzKw</a>.  
+<a href="#details">Więcej...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="_s_wektor_8hh_source.html">SWektor.hh</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_l_zespolona_8hh_source.html">LZespolona.hh</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Wykres zależności załączania dla SMacierzKw.hh:</div>
+<div class="dyncontent">
+<div class="center"><img src="_s_macierz_kw_8hh__incl.png" border="0" usemap="#_2home_2tomasz_2_zadanie_szablon_dla_rownan_2prog_2prj_2inc_2_s_macierz_kw_8hh" alt=""/></div>
+<map name="_2home_2tomasz_2_zadanie_szablon_dla_rownan_2prog_2prj_2inc_2_s_macierz_kw_8hh" id="_2home_2tomasz_2_zadanie_szablon_dla_rownan_2prog_2prj_2inc_2_s_macierz_kw_8hh">
+<area shape="rect" id="node2" href="_s_wektor_8hh.html" title="Definicja szablonu klasy Wektor. " alt="" coords="129,95,219,121"/>
+<area shape="rect" id="node3" href="_l_zespolona_8hh.html" title="Definicja struktury LZespolona. " alt="" coords="38,169,145,196"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+Ten wykres pokazuje, które pliki bezpośrednio lub pośrednio załączają ten plik:</div>
+<div class="dyncontent">
+<div class="center"><img src="_s_macierz_kw_8hh__dep__incl.png" border="0" usemap="#_2home_2tomasz_2_zadanie_szablon_dla_rownan_2prog_2prj_2inc_2_s_macierz_kw_8hhdep" alt=""/></div>
+<map name="_2home_2tomasz_2_zadanie_szablon_dla_rownan_2prog_2prj_2inc_2_s_macierz_kw_8hhdep" id="_2home_2tomasz_2_zadanie_szablon_dla_rownan_2prog_2prj_2inc_2_s_macierz_kw_8hhdep">
+<area shape="rect" id="node2" href="_s_uklad_rownan_l_8hh.html" title="Definicja szablonu klasy UkladRownanL. " alt="" coords="132,102,411,143"/>
+<area shape="rect" id="node5" href="main_8cpp.html" title="Główny plik z programem wykonawczym. " alt="" coords="317,206,533,247"/>
+<area shape="rect" id="node6" href="_s_macierz_kw_8cpp.html" title="Definicje metod i funkcji klasy MacierzKw. " alt="" coords="533,95,751,151"/>
+<area shape="rect" id="node3" href="_s_uklad_rownan_l_8cpp.html" title="Definicje metod i funkcji klasy UkladRownanL. " alt="" coords="5,206,292,247"/>
+<area shape="rect" id="node4" href="_c_uklad_rownan_l_8cpp.html" title="Jawne konkretyzacje szablonu klasy UkladRownanL. " alt="" coords="5,303,292,344"/>
+<area shape="rect" id="node7" href="_c_macierz_kw_8cpp.html" title="Jawne konkretyzacje szablonu klasy MacierzKw. " alt="" coords="557,199,775,255"/>
+</map>
+</div>
 </div>
 <p><a href="_s_macierz_kw_8hh_source.html">Idź do kodu źródłowego tego pliku.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Komponenty</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_macierz_kw.html">MacierzKw&lt; TYP, ROZMIAR &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Modeluje pojęcie <a class="el" href="class_macierz_kw.html" title="Modeluje pojęcie MacierzKw. ">MacierzKw</a>.  <a href="class_macierz_kw.html#details">Więcej...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Wyliczenia</h2></td></tr>
 <tr class="memitem:aaf653bd2ed57cdd0f3fe5b2e9cf2f3c2"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_s_macierz_kw_8hh.html#aaf653bd2ed57cdd0f3fe5b2e9cf2f3c2">Wyz_Metoda</a> { <a class="el" href="_s_macierz_kw_8hh.html#aaf653bd2ed57cdd0f3fe5b2e9cf2f3c2a2fd290f2b4b844a8653d64e6462bca28">Laplace</a>, 
 <a class="el" href="_s_macierz_kw_8hh.html#aaf653bd2ed57cdd0f3fe5b2e9cf2f3c2ab15a7891aa5223439e4692a1048cb220">Gauss</a>
- }</td></tr>
+ }<tr class="memdesc:aaf653bd2ed57cdd0f3fe5b2e9cf2f3c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Określa metodę wyliczania wyznacznika.  <a href="_s_macierz_kw_8hh.html#aaf653bd2ed57cdd0f3fe5b2e9cf2f3c2">Więcej...</a><br /></td></tr>
+</td></tr>
 <tr class="separator:aaf653bd2ed57cdd0f3fe5b2e9cf2f3c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a947d16a689e52e40f100ea05959f9476"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_s_macierz_kw_8hh.html#a947d16a689e52e40f100ea05959f9476">Odw_Metoda</a> { <a class="el" href="_s_macierz_kw_8hh.html#a947d16a689e52e40f100ea05959f9476aa41d3b8add8837fce0f88e185705b14c">Gauss_Jordan</a>, 
 <a class="el" href="_s_macierz_kw_8hh.html#a947d16a689e52e40f100ea05959f9476a3ab7ff1a534bbeefd9b5322d9e87ad3e">Definicja</a>
- }</td></tr>
+ }<tr class="memdesc:a947d16a689e52e40f100ea05959f9476"><td class="mdescLeft">&#160;</td><td class="mdescRight">Określa metodę odwracania macierzy.  <a href="_s_macierz_kw_8hh.html#a947d16a689e52e40f100ea05959f9476">Więcej...</a><br /></td></tr>
+</td></tr>
 <tr class="separator:a947d16a689e52e40f100ea05959f9476"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Funkcje</h2></td></tr>
 <tr class="memitem:abd2691f70506c38096478884500f8f51"><td class="memTemplParams" colspan="2">template&lt;class TYP , unsigned int ROZMIAR&gt; </td></tr>
 <tr class="memitem:abd2691f70506c38096478884500f8f51"><td class="memTemplItemLeft" align="right" valign="top">std::istream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="_s_macierz_kw_8hh.html#abd2691f70506c38096478884500f8f51">operator&gt;&gt;</a> (std::istream &amp;strm, <a class="el" href="class_macierz_kw.html">MacierzKw</a>&lt; TYP, ROZMIAR &gt; &amp;M)</td></tr>
+<tr class="memdesc:abd2691f70506c38096478884500f8f51"><td class="mdescLeft">&#160;</td><td class="mdescRight">Przeciążenie operatora wczytywania.  <a href="#abd2691f70506c38096478884500f8f51">Więcej...</a><br /></td></tr>
 <tr class="separator:abd2691f70506c38096478884500f8f51"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adc3a02371e569bc8c98be7a1b397dc5b"><td class="memTemplParams" colspan="2">template&lt;class TYP , unsigned int ROZMIAR&gt; </td></tr>
 <tr class="memitem:adc3a02371e569bc8c98be7a1b397dc5b"><td class="memTemplItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="_s_macierz_kw_8hh.html#adc3a02371e569bc8c98be7a1b397dc5b">operator&lt;&lt;</a> (std::ostream &amp;strm, const <a class="el" href="class_macierz_kw.html">MacierzKw</a>&lt; TYP, ROZMIAR &gt; &amp;M)</td></tr>
+<tr class="memdesc:adc3a02371e569bc8c98be7a1b397dc5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Przeciążenie operatora wyświetlania.  <a href="#adc3a02371e569bc8c98be7a1b397dc5b">Więcej...</a><br /></td></tr>
 <tr class="separator:adc3a02371e569bc8c98be7a1b397dc5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab2770c25007c5ef95ce75db5c4377c93"><td class="memTemplParams" colspan="2">template&lt;class TYP , unsigned int ROZMIAR&gt; </td></tr>
 <tr class="memitem:ab2770c25007c5ef95ce75db5c4377c93"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_macierz_kw.html">MacierzKw</a>&lt; TYP, ROZMIAR &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="_s_macierz_kw_8hh.html#ab2770c25007c5ef95ce75db5c4377c93">operator*</a> (TYP liczba, const <a class="el" href="class_macierz_kw.html">MacierzKw</a>&lt; TYP, ROZMIAR &gt; &amp;M)</td></tr>
+<tr class="memdesc:ab2770c25007c5ef95ce75db5c4377c93"><td class="mdescLeft">&#160;</td><td class="mdescRight">Przeciążenie operatora mnożenia.  <a href="#ab2770c25007c5ef95ce75db5c4377c93">Więcej...</a><br /></td></tr>
 <tr class="separator:ab2770c25007c5ef95ce75db5c4377c93"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa0ee43a9bd4eaa89aff31c0f2527150a"><td class="memTemplParams" colspan="2">template&lt;class TYP , unsigned int ROZMIAR&gt; </td></tr>
 <tr class="memitem:aa0ee43a9bd4eaa89aff31c0f2527150a"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_macierz_kw.html">MacierzKw</a>&lt; TYP, ROZMIAR-1 &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="_s_macierz_kw_8hh.html#aa0ee43a9bd4eaa89aff31c0f2527150a">pomniejsz_macierz</a> (const <a class="el" href="class_macierz_kw.html">MacierzKw</a>&lt; TYP, ROZMIAR &gt; &amp;M, unsigned int index1, unsigned int index2)</td></tr>
+<tr class="memdesc:aa0ee43a9bd4eaa89aff31c0f2527150a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tworzy macierz pomniejszoną względem wybranego elementu.  <a href="#aa0ee43a9bd4eaa89aff31c0f2527150a">Więcej...</a><br /></td></tr>
 <tr class="separator:aa0ee43a9bd4eaa89aff31c0f2527150a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Dokumentacja typów wyliczanych</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Opis szczegółowy</h2>
+<div class="textblock"><p>Plik zawiera definicje szablonu klasy <a class="el" href="class_macierz_kw.html" title="Modeluje pojęcie MacierzKw. ">MacierzKw</a> o zmiennym rozmiarze i typie danych. <br />
+Zawiera także deklaracje metod i funkcji działających na macierzach kwadratowych. </p>
+
+<p class="definition">Definicja w pliku <a class="el" href="_s_macierz_kw_8hh_source.html">SMacierzKw.hh</a>.</p>
+</div><h2 class="groupheader">Dokumentacja typów wyliczanych</h2>
 <a id="a947d16a689e52e40f100ea05959f9476"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a947d16a689e52e40f100ea05959f9476">&#9670;&nbsp;</a></span>Odw_Metoda</h2>
 
@@ -115,12 +173,19 @@ Funkcje</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Typ wyliczeniowy określające dopuszczalne metody odwracania macierzy. </p>
 <table class="fieldtable">
-<tr><th colspan="2">Wartości wyliczeń</th></tr><tr><td class="fieldname"><a id="a947d16a689e52e40f100ea05959f9476aa41d3b8add8837fce0f88e185705b14c"></a>Gauss_Jordan&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a947d16a689e52e40f100ea05959f9476a3ab7ff1a534bbeefd9b5322d9e87ad3e"></a>Definicja&#160;</td><td class="fielddoc"></td></tr>
+<tr><th colspan="2">Wartości wyliczeń</th></tr><tr><td class="fieldname"><a id="a947d16a689e52e40f100ea05959f9476aa41d3b8add8837fce0f88e185705b14c"></a>Gauss_Jordan&#160;</td><td class="fielddoc"><ul>
+<li>oznacza odwracanie macierzy metodą eliminacji Gaussa-Jordana. </li>
+</ul>
+</td></tr>
+<tr><td class="fieldname"><a id="a947d16a689e52e40f100ea05959f9476a3ab7ff1a534bbeefd9b5322d9e87ad3e"></a>Definicja&#160;</td><td class="fielddoc"><ul>
+<li>oznacza odwracanie macierzy korzystając z definicji macierzy odwrotnej. </li>
+</ul>
+</td></tr>
 </table>
 
-<p class="definition">Definicja w linii <a class="el" href="_s_macierz_kw_8hh_source.html#l00008">8</a> pliku <a class="el" href="_s_macierz_kw_8hh_source.html">SMacierzKw.hh</a>.</p>
+<p class="definition">Definicja w linii <a class="el" href="_s_macierz_kw_8hh_source.html#l00041">41</a> pliku <a class="el" href="_s_macierz_kw_8hh_source.html">SMacierzKw.hh</a>.</p>
 
 </div>
 </div>
@@ -135,12 +200,19 @@ Funkcje</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Typ wyliczeniowy określające dopuszczalne metody wyliczania wyznacznika macierzy. </p>
 <table class="fieldtable">
-<tr><th colspan="2">Wartości wyliczeń</th></tr><tr><td class="fieldname"><a id="aaf653bd2ed57cdd0f3fe5b2e9cf2f3c2a2fd290f2b4b844a8653d64e6462bca28"></a>Laplace&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="aaf653bd2ed57cdd0f3fe5b2e9cf2f3c2ab15a7891aa5223439e4692a1048cb220"></a>Gauss&#160;</td><td class="fielddoc"></td></tr>
+<tr><th colspan="2">Wartości wyliczeń</th></tr><tr><td class="fieldname"><a id="aaf653bd2ed57cdd0f3fe5b2e9cf2f3c2a2fd290f2b4b844a8653d64e6462bca28"></a>Laplace&#160;</td><td class="fielddoc"><ul>
+<li>oznacza wyliczanie wyznacznika metodą Laplace'a. </li>
+</ul>
+</td></tr>
+<tr><td class="fieldname"><a id="aaf653bd2ed57cdd0f3fe5b2e9cf2f3c2ab15a7891aa5223439e4692a1048cb220"></a>Gauss&#160;</td><td class="fielddoc"><ul>
+<li>oznacza wyliczanie wyznacznika metodą eliminacji Gaussa. </li>
+</ul>
+</td></tr>
 </table>
 
-<p class="definition">Definicja w linii <a class="el" href="_s_macierz_kw_8hh_source.html#l00007">7</a> pliku <a class="el" href="_s_macierz_kw_8hh_source.html">SMacierzKw.hh</a>.</p>
+<p class="definition">Definicja w linii <a class="el" href="_s_macierz_kw_8hh_source.html#l00022">22</a> pliku <a class="el" href="_s_macierz_kw_8hh_source.html">SMacierzKw.hh</a>.</p>
 
 </div>
 </div>
@@ -172,8 +244,16 @@ template&lt;class TYP , unsigned int ROZMIAR&gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Przeciążenie operatora mnożenia dla typu double - <a class="el" href="class_macierz_kw.html" title="Modeluje pojęcie MacierzKw. ">MacierzKw</a>. Dokonuje operacji mnożenie wartości argumentów. </p><dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">liczba</td><td>- czynnik w postaci skalara (TYP). </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">M</td><td>- czynnik w postaci macierzy. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>Zwraca macierz po dokonaniu operacji mnożenia. </dd></dl>
 
-<p class="definition">Definicja w linii <a class="el" href="_s_macierz_kw_8cpp_source.html#l00105">105</a> pliku <a class="el" href="_s_macierz_kw_8cpp_source.html">SMacierzKw.cpp</a>.</p>
+<p class="definition">Definicja w linii <a class="el" href="_s_macierz_kw_8cpp_source.html#l00112">112</a> pliku <a class="el" href="_s_macierz_kw_8cpp_source.html">SMacierzKw.cpp</a>.</p>
 
 </div>
 </div>
@@ -204,8 +284,19 @@ template&lt;class TYP , unsigned int ROZMIAR&gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Przeciążenie operatora wyświetlania dla obiektów klasy <a class="el" href="class_macierz_kw.html" title="Modeluje pojęcie MacierzKw. ">MacierzKw</a>. <br />
+</p><dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">&amp;strm</td><td>- strumień danych. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">M</td><td>- macierz, ktorej wartości są wyświetlane. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>Zwraca referencję do strumienia danych. </dd></dl>
+<dl class="section attention"><dt>Uwaga</dt><dd>Strumień musi być poprawnie zainicjowany;<br />
+</dd></dl>
 
-<p class="definition">Definicja w linii <a class="el" href="_s_macierz_kw_8cpp_source.html#l00046">46</a> pliku <a class="el" href="_s_macierz_kw_8cpp_source.html">SMacierzKw.cpp</a>.</p>
+<p class="definition">Definicja w linii <a class="el" href="_s_macierz_kw_8cpp_source.html#l00053">53</a> pliku <a class="el" href="_s_macierz_kw_8cpp_source.html">SMacierzKw.cpp</a>.</p>
 
 </div>
 </div>
@@ -236,8 +327,27 @@ template&lt;class TYP , unsigned int ROZMIAR&gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Przeciążenie operatora wczytywania dla obiektów klasy <a class="el" href="class_macierz_kw.html" title="Modeluje pojęcie MacierzKw. ">MacierzKw</a>. <br />
+</p><dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">&amp;strm</td><td>- strumień danych. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">M</td><td>- macierz, do której wczytywane są wartości. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>Zwraca referencję do strumienia danych. </dd></dl>
+<dl class="section attention"><dt>Uwaga</dt><dd>Strumień musi być poprawnie zainicjowany;<br />
+ W przypadku czytania błędnych wartości strumień psuje sie. </dd></dl>
 
-<p class="definition">Definicja w linii <a class="el" href="_s_macierz_kw_8cpp_source.html#l00038">38</a> pliku <a class="el" href="_s_macierz_kw_8cpp_source.html">SMacierzKw.cpp</a>.</p>
+<p class="definition">Definicja w linii <a class="el" href="_s_macierz_kw_8cpp_source.html#l00045">45</a> pliku <a class="el" href="_s_macierz_kw_8cpp_source.html">SMacierzKw.cpp</a>.</p>
+<div class="dynheader">
+Oto graf wywołań dla tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="_s_macierz_kw_8hh_abd2691f70506c38096478884500f8f51_cgraph.png" border="0" usemap="#_s_macierz_kw_8hh_abd2691f70506c38096478884500f8f51_cgraph" alt=""/></div>
+<map name="_s_macierz_kw_8hh_abd2691f70506c38096478884500f8f51_cgraph" id="_s_macierz_kw_8hh_abd2691f70506c38096478884500f8f51_cgraph">
+<area shape="rect" id="node2" href="class_macierz_kw.html#a10bf0513eab6305a41b0dd6569059825" title="Transponuje macierz. " alt="" coords="139,5,293,32"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -274,8 +384,29 @@ template&lt;class TYP , unsigned int ROZMIAR&gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Funkcja tworzy macierz pomniejszoną względem wybranego elementu. </p><dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">index1</td><td>- pierrszy index elementu, względem którego pomniejszamy macierz. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">index2</td><td>- drugi index elementu, względem którego pomniejszamy macierz. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">M</td><td>- macierz, którą będziemy pomniejszać. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>Zwraca nową macierz o mniejszym rozmiarze. </dd></dl>
 
-<p class="definition">Definicja w linii <a class="el" href="_s_macierz_kw_8cpp_source.html#l00191">191</a> pliku <a class="el" href="_s_macierz_kw_8cpp_source.html">SMacierzKw.cpp</a>.</p>
+<p class="definition">Definicja w linii <a class="el" href="_s_macierz_kw_8cpp_source.html#l00198">198</a> pliku <a class="el" href="_s_macierz_kw_8cpp_source.html">SMacierzKw.cpp</a>.</p>
+<div class="dynheader">
+Oto graf wywoływań tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="_s_macierz_kw_8hh_aa0ee43a9bd4eaa89aff31c0f2527150a_icgraph.png" border="0" usemap="#_s_macierz_kw_8hh_aa0ee43a9bd4eaa89aff31c0f2527150a_icgraph" alt=""/></div>
+<map name="_s_macierz_kw_8hh_aa0ee43a9bd4eaa89aff31c0f2527150a_icgraph" id="_s_macierz_kw_8hh_aa0ee43a9bd4eaa89aff31c0f2527150a_icgraph">
+<area shape="rect" id="node2" href="class_macierz_kw.html#a27c42db5c70afea027e0c42f89c87e60" title="Oblicza wyznacznik macierzy. " alt="" coords="188,67,352,94"/>
+<area shape="rect" id="node3" href="class_macierz_kw.html#a99c157867ea2d3b7a82a0621ad557c2f" title="Tworzy macierz dopełniej algebraicznych. " alt="" coords="411,5,553,47"/>
+<area shape="rect" id="node4" href="class_macierz_kw.html#ac7cb6fdb03634683f6d31a14bbba22f2" title="Tworzy macierz odwrotną " alt="" coords="612,42,749,69"/>
+<area shape="rect" id="node5" href="class_uklad_rownan_l.html#af0474be2743b24dbe7d48f07f26b08b1" title="Rozwiązuje układ równań metodą Cramera. " alt="" coords="400,123,564,164"/>
+<area shape="rect" id="node6" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="655,130,706,157"/>
+</map>
+</div>
 
 </div>
 </div>

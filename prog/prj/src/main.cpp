@@ -2,7 +2,51 @@
 #include "SMacierzKw.hh"
 #include "SUkladRownanL.hh"
 #include "LZespolona.hh"
+/*!
+ * \file
+ * \brief Główny plik z programem wykonawczym
+ */
 
+/*!
+ * Program na wstępie pobiera symbol 'r' lub 'z' ze standardowego 
+ * wejścia oznaczający typ wprowadzanych danych. \n
+ * Następnie pobiera dane do układu równań ze standardowego 
+ * wejścia i po rozwiązaniu układu trzema róznymi metodami wyświetla 
+ * wyniki wraz z błędami. \n
+ * Przykładowe wyświetlenie wyniku działania programu:
+\verbatim
+       Uklad rownan do rozwiazania:
+       | 2.00  2.00  1.00  3.00  3.00 | |x_1|   | 9.00 |
+       | 1.00  2.00  1.50  1.00  2.00 | |x_2|   | 8.00 |
+       | 1.00  3.00  1.00  2.00  2.00 | |x_3| = | 8.00 |
+       | 1.00  1.00  1.00  4.00  0.00 | |x_4|   | 9.00 |
+       | 2.00  2.00  0.00  0.00  1.00 | |x_5|   | 1.00 |
+       
+       ROZWIAZANIE METODA CRAMERA, WYZNACZNIK GAUSSEM
+       Rozwiazanie x = (x1, x2, x3, x4, x5):
+       -0.13  0.47  3.5  1.3  0.31 
+       
+       Wektor bledu:  Ax-b = ( -1.78e-15  -1.78e-15  -1.78e-15  0.00e+00  -2.89e-15 )
+       Dlugosc wektora bledu: ||Ax-b|| = 4.22e-15
+       
+       
+       ROZWIAZANIE METODA CRAMERA, WYZNACZNIK LAPLACEM
+       Rozwiazanie x = (x1, x2, x3, x4, x5):
+       -0.13  0.47  3.5  1.3  0.31 
+       
+       Wektor bledu:  Ax-b = ( 0.00e+00  0.00e+00  0.00e+00  0.00e+00  0.00e+00 )
+       Dlugosc wektora bledu: ||Ax-b|| = 0.00e+00
+
+       
+       ROZWIAZANIE METODA GAUSSEM
+       Rozwiazanie x = (x1, x2, x3, x4, x5):
+       -0.13  0.47  3.5  1.3  0.31 
+       
+       Wektor bledu:  Ax-b = ( 0.00e+00  0.00e+00  0.00e+00  0.00e+00  2.22e-16 )
+       Dlugosc wektora bledu: ||Ax-b|| = 2.22e-16
+\endverbatim
+
+ */
 int main() {
   char wybor;
   cin >> wybor;

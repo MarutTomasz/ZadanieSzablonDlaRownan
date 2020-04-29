@@ -136,7 +136,7 @@ double LZespolona::modul() const {
 
 
 std::ostream & operator << (std::ostream &strm, const LZespolona &Liczba) {
-  cout << '(' << Liczba.re << showpos << Liczba.im << noshowpos << "i)";
+  cout << "(" << Liczba.re << showpos << Liczba.im << noshowpos << "i)";
   return strm; 
 }
 

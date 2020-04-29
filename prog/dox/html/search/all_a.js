@@ -1,8 +1,6 @@
 var searchData=
 [
-  ['smacierzkw_2ecpp',['SMacierzKw.cpp',['../_s_macierz_kw_8cpp.html',1,'']]],
-  ['smacierzkw_2ehh',['SMacierzKw.hh',['../_s_macierz_kw_8hh.html',1,'']]],
-  ['sprzez',['sprzez',['../struct_l_zespolona.html#afb52afc8b3ee62b9f3c0a2097c761597',1,'LZespolona']]],
-  ['swektor_2ecpp',['SWektor.cpp',['../_s_wektor_8cpp.html',1,'']]],
-  ['swektor_2ehh',['SWektor.hh',['../_s_wektor_8hh.html',1,'']]]
+  ['re',['re',['../struct_l_zespolona.html#a98587ffd2cc06a073f8bfdba116ea8d4',1,'LZespolona']]],
+  ['rozwiaz_5fcramer',['rozwiaz_Cramer',['../class_uklad_rownan_l.html#af0474be2743b24dbe7d48f07f26b08b1',1,'UkladRownanL']]],
+  ['rozwiaz_5fgauss',['rozwiaz_Gauss',['../class_uklad_rownan_l.html#a512e5ffa5f8f9b2f725c5f3da13714c7',1,'UkladRownanL']]]
 ];

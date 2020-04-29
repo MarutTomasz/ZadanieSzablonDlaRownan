@@ -16,6 +16,9 @@
 <script type="text/javascript">
   $(document).ready(initResizable);
 </script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -35,11 +38,15 @@
 </div>
 <!-- end header part -->
 <!-- Wygenerowano przez Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+</script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
 $(function() {
-  initMenu('',false,false,'search.php','Szukaj');
+  initMenu('',true,false,'search.php','Szukaj');
+  $(document).ready(function() { init_search(); });
 });
 </script>
 <div id="main-nav"></div>
@@ -58,6 +65,20 @@ $(function() {
 $(document).ready(function(){initNavTree('globals.html','');});
 </script>
 <div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
 <div class="contents">
 <div class="textblock">Tutaj znajduje się lista wszystkich składowych plików wraz z odnośnikami do plików, do których one należą:</div>
 
@@ -175,6 +196,11 @@ $(document).ready(function(){initNavTree('globals.html','');});
 
 
 <h3><a id="index_w"></a>- w -</h3><ul>
+<li>wyswietl_wektor_bledu()
+: <a class="el" href="_s_wektor_8hh.html#a287fba929d3149ff9b003326329921e6">SWektor.hh</a>
+, <a class="el" href="_c_wektor_8cpp.html#a39002dba05dd920e8073d0af15591bbb">CWektor.cpp</a>
+, <a class="el" href="_s_wektor_8cpp.html#a287fba929d3149ff9b003326329921e6">SWektor.cpp</a>
+</li>
 <li>Wyz_Metoda
 : <a class="el" href="_s_macierz_kw_8hh.html#aaf653bd2ed57cdd0f3fe5b2e9cf2f3c2">SMacierzKw.hh</a>
 </li>

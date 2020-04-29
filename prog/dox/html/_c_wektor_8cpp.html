@@ -16,6 +16,9 @@
 <script type="text/javascript">
   $(document).ready(initResizable);
 </script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -35,11 +38,15 @@
 </div>
 <!-- end header part -->
 <!-- Wygenerowano przez Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+</script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
 $(function() {
-  initMenu('',false,false,'search.php','Szukaj');
+  initMenu('',true,false,'search.php','Szukaj');
+  $(document).ready(function() { init_search(); });
 });
 </script>
 <div id="main-nav"></div>
@@ -58,6 +65,20 @@ $(function() {
 $(document).ready(function(){initNavTree('_c_wektor_8cpp.html','');});
 </script>
 <div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
 <div class="header">
   <div class="summary">
 <a href="#func-members">Funkcje</a>  </div>
@@ -69,6 +90,16 @@ $(document).ready(function(){initNavTree('_c_wektor_8cpp.html','');});
 <p>Jawne konkretyzacje szablonu klasy <a class="el" href="class_wektor.html" title="Modeluje pojęcie Wektor. ">Wektor</a>.  
 <a href="#details">Więcej...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="_s_wektor_8cpp_source.html">SWektor.cpp</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Wykres zależności załączania dla CWektor.cpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="_c_wektor_8cpp__incl.png" border="0" usemap="#_2home_2tomasz_2_zadanie_szablon_dla_rownan_2prog_2prj_2src_2_c_wektor_8cpp" alt=""/></div>
+<map name="_2home_2tomasz_2_zadanie_szablon_dla_rownan_2prog_2prj_2src_2_c_wektor_8cpp" id="_2home_2tomasz_2_zadanie_szablon_dla_rownan_2prog_2prj_2src_2_c_wektor_8cpp">
+<area shape="rect" id="node2" href="_s_wektor_8cpp.html" title="Definicje metod i funkcji klasy Wektor. " alt="" coords="87,95,186,121"/>
+<area shape="rect" id="node3" href="_s_wektor_8hh.html" title="Definicja szablonu klasy Wektor. " alt="" coords="91,169,182,196"/>
+<area shape="rect" id="node4" href="_l_zespolona_8hh.html" title="Definicja struktury LZespolona. " alt="" coords="29,244,135,271"/>
+</map>
+</div>
 </div>
 <p><a href="_c_wektor_8cpp_source.html">Idź do kodu źródłowego tego pliku.</a></p>
 <table class="memberdecls">
@@ -80,12 +111,16 @@ Funkcje</h2></td></tr>
 <tr class="separator:ad0cc7fbd18e3d3ee9f1d1838774ec1dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3b2a5a7b5d8d260f9722b58af8d037c8"><td class="memItemLeft" align="right" valign="top">template <a class="el" href="class_wektor.html">Wektor</a>&lt; double, 5 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_c_wektor_8cpp.html#a3b2a5a7b5d8d260f9722b58af8d037c8">operator*</a> (double liczba, const <a class="el" href="class_wektor.html">Wektor</a>&lt; double, 5 &gt; &amp;W)</td></tr>
 <tr class="separator:a3b2a5a7b5d8d260f9722b58af8d037c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39002dba05dd920e8073d0af15591bbb"><td class="memItemLeft" align="right" valign="top">template void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_c_wektor_8cpp.html#a39002dba05dd920e8073d0af15591bbb">wyswietl_wektor_bledu</a> (const <a class="el" href="class_wektor.html">Wektor</a>&lt; double, 5 &gt; &amp;W)</td></tr>
+<tr class="separator:a39002dba05dd920e8073d0af15591bbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a09bdfbc26afd65dda45a2d6b7a861d2a"><td class="memItemLeft" align="right" valign="top">template std::istream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_c_wektor_8cpp.html#a09bdfbc26afd65dda45a2d6b7a861d2a">operator&gt;&gt;</a> (std::istream &amp;strm, <a class="el" href="class_wektor.html">Wektor</a>&lt; <a class="el" href="struct_l_zespolona.html">LZespolona</a>, 5 &gt; &amp;W)</td></tr>
 <tr class="separator:a09bdfbc26afd65dda45a2d6b7a861d2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1477dae47c94eda96a4cae960f95d0ae"><td class="memItemLeft" align="right" valign="top">template std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_c_wektor_8cpp.html#a1477dae47c94eda96a4cae960f95d0ae">operator&lt;&lt;</a> (std::ostream &amp;strm, const <a class="el" href="class_wektor.html">Wektor</a>&lt; <a class="el" href="struct_l_zespolona.html">LZespolona</a>, 5 &gt; &amp;W)</td></tr>
 <tr class="separator:a1477dae47c94eda96a4cae960f95d0ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a81818d99cfe75d354feec30a0df4579b"><td class="memItemLeft" align="right" valign="top">template <a class="el" href="class_wektor.html">Wektor</a>&lt; <a class="el" href="struct_l_zespolona.html">LZespolona</a>, 5 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_c_wektor_8cpp.html#a81818d99cfe75d354feec30a0df4579b">operator*</a> (<a class="el" href="struct_l_zespolona.html">LZespolona</a> liczba, const <a class="el" href="class_wektor.html">Wektor</a>&lt; <a class="el" href="struct_l_zespolona.html">LZespolona</a>, 5 &gt; &amp;W)</td></tr>
 <tr class="separator:a81818d99cfe75d354feec30a0df4579b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ecf548cd5963aad3263790432f61fee"><td class="memItemLeft" align="right" valign="top">template void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_c_wektor_8cpp.html#a0ecf548cd5963aad3263790432f61fee">wyswietl_wektor_bledu</a> (const <a class="el" href="class_wektor.html">Wektor</a>&lt; <a class="el" href="struct_l_zespolona.html">LZespolona</a>, 5 &gt; &amp;W)</td></tr>
+<tr class="separator:a0ecf548cd5963aad3263790432f61fee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a594adbc04da1d6346a39c4680cd26ffb"><td class="memItemLeft" align="right" valign="top">template <a class="el" href="class_wektor.html">Wektor</a>&lt; double, 4 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_c_wektor_8cpp.html#a594adbc04da1d6346a39c4680cd26ffb">operator*</a> (double liczba, const <a class="el" href="class_wektor.html">Wektor</a>&lt; double, 4 &gt; &amp;W)</td></tr>
 <tr class="separator:a594adbc04da1d6346a39c4680cd26ffb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aac2d52d5671e6540436e7634dcaba749"><td class="memItemLeft" align="right" valign="top">template <a class="el" href="class_wektor.html">Wektor</a>&lt; <a class="el" href="struct_l_zespolona.html">LZespolona</a>, 4 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_c_wektor_8cpp.html#aac2d52d5671e6540436e7634dcaba749">operator*</a> (<a class="el" href="struct_l_zespolona.html">LZespolona</a> liczba, const <a class="el" href="class_wektor.html">Wektor</a>&lt; <a class="el" href="struct_l_zespolona.html">LZespolona</a>, 4 &gt; &amp;W)</td></tr>
@@ -735,6 +770,42 @@ Funkcje</h2></td></tr>
           <td></td>
           <td>)</td>
           <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a39002dba05dd920e8073d0af15591bbb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a39002dba05dd920e8073d0af15591bbb">&#9670;&nbsp;</a></span>wyswietl_wektor_bledu() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">template void wyswietl_wektor_bledu </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_wektor.html">Wektor</a>&lt; double, 5 &gt; &amp;&#160;</td>
+          <td class="paramname"><em>W</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0ecf548cd5963aad3263790432f61fee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ecf548cd5963aad3263790432f61fee">&#9670;&nbsp;</a></span>wyswietl_wektor_bledu() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">template void wyswietl_wektor_bledu </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_wektor.html">Wektor</a>&lt; <a class="el" href="struct_l_zespolona.html">LZespolona</a>, 5 &gt; &amp;&#160;</td>
+          <td class="paramname"><em>W</em></td><td>)</td>
+          <td></td>
         </tr>
       </table>
 </div><div class="memdoc">

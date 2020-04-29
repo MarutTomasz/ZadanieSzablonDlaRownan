@@ -16,6 +16,9 @@
 <script type="text/javascript">
   $(document).ready(initResizable);
 </script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -35,11 +38,15 @@
 </div>
 <!-- end header part -->
 <!-- Wygenerowano przez Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+</script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
 $(function() {
-  initMenu('',false,false,'search.php','Szukaj');
+  initMenu('',true,false,'search.php','Szukaj');
+  $(document).ready(function() { init_search(); });
 });
 </script>
 <div id="main-nav"></div>
@@ -58,6 +65,20 @@ $(function() {
 $(document).ready(function(){initNavTree('dir_72345776cd6700fb0dedb8f1faaa0c00.html','');});
 </script>
 <div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
 <div class="header">
   <div class="headertitle">
 <div class="title">Dokumentacja katalogu inc</div>  </div>
@@ -70,8 +91,10 @@ Pliki</h2></td></tr>
 <tr class="memdesc:_l_zespolona_8hh"><td class="mdescLeft">&#160;</td><td class="mdescRight">Definicja struktury <a class="el" href="struct_l_zespolona.html" title="Modeluje pojęcie LZespolona. ">LZespolona</a>. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:_s_macierz_kw_8hh"><td class="memItemLeft" align="right" valign="top">plik &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_s_macierz_kw_8hh.html">SMacierzKw.hh</a> <a href="_s_macierz_kw_8hh_source.html">[kod źródłowy]</a></td></tr>
+<tr class="memdesc:_s_macierz_kw_8hh"><td class="mdescLeft">&#160;</td><td class="mdescRight">Definicja szablonu klasy <a class="el" href="class_macierz_kw.html" title="Modeluje pojęcie MacierzKw. ">MacierzKw</a>. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:_s_uklad_rownan_l_8hh"><td class="memItemLeft" align="right" valign="top">plik &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_s_uklad_rownan_l_8hh.html">SUkladRownanL.hh</a> <a href="_s_uklad_rownan_l_8hh_source.html">[kod źródłowy]</a></td></tr>
+<tr class="memdesc:_s_uklad_rownan_l_8hh"><td class="mdescLeft">&#160;</td><td class="mdescRight">Definicja szablonu klasy <a class="el" href="class_uklad_rownan_l.html" title="Modeluje pojęcie UkladRownanL. ">UkladRownanL</a>. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:_s_wektor_8hh"><td class="memItemLeft" align="right" valign="top">plik &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_s_wektor_8hh.html">SWektor.hh</a> <a href="_s_wektor_8hh_source.html">[kod źródłowy]</a></td></tr>
 <tr class="memdesc:_s_wektor_8hh"><td class="mdescLeft">&#160;</td><td class="mdescRight">Definicja szablonu klasy <a class="el" href="class_wektor.html" title="Modeluje pojęcie Wektor. ">Wektor</a>. <br /></td></tr>

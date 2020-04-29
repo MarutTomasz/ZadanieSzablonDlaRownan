@@ -1,0 +1,8 @@
+<map id="MacierzKw::przestaw_wiersze" name="MacierzKw::przestaw_wiersze">
+<area shape="rect" id="node2" href="$class_macierz_kw.html#a27c42db5c70afea027e0c42f89c87e60" title="Oblicza wyznacznik macierzy. " alt="" coords="201,91,365,118"/>
+<area shape="rect" id="node4" href="$class_macierz_kw.html#ac7cb6fdb03634683f6d31a14bbba22f2" title="Tworzy macierz odwrotną " alt="" coords="625,33,763,59"/>
+<area shape="rect" id="node7" href="$class_uklad_rownan_l.html#a512e5ffa5f8f9b2f725c5f3da13714c7" title="Rozwiązuje układ równań metodą eliminacji Gaussa. " alt="" coords="201,172,365,213"/>
+<area shape="rect" id="node3" href="$class_macierz_kw.html#a99c157867ea2d3b7a82a0621ad557c2f" title="Tworzy macierz dopełniej algebraicznych. " alt="" coords="425,25,566,67"/>
+<area shape="rect" id="node5" href="$class_uklad_rownan_l.html#af0474be2743b24dbe7d48f07f26b08b1" title="Rozwiązuje układ równań metodą Cramera. " alt="" coords="413,143,577,184"/>
+<area shape="rect" id="node6" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="669,179,719,206"/>
+</map>
